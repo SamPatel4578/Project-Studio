@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ombha\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\tejas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\tejas\\Source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
       "projectName": "UTR WebApplication",
-      "projectPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
-      "packagesPath": "C:\\Users\\ombha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\obj\\",
+      "projectPath": "C:\\Users\\tejas\\Source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "packagesPath": "C:\\Users\\tejas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tejas\\Source\\Repos\\Project-Studio\\UTR WebApplication\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ombha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\tejas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -46,11 +40,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -75,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -7,4 +7,14 @@
     <RootNamespace>UTR_WebApplication</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Views\Home\login.cshtml" />
+    <Content Remove="Views\Home\SignUp.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\login.cshtml" />
+    <None Include="Views\Home\SignUp.cshtml" />
+  </ItemGroup>
+
 </Project>

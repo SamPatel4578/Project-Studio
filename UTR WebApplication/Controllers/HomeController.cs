@@ -28,6 +28,11 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

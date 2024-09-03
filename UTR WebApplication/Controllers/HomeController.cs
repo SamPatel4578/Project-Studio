@@ -33,6 +33,16 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        public ActionResult TwofectorAuth()
+        {
+            return View();
+        }
+
+        public ActionResult FoodMenu()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

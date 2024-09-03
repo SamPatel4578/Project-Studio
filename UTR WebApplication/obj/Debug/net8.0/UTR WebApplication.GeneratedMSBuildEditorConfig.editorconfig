@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/tejas/source/repos/Project-Studio/UTR WebApplication/Views/Home/FoodMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb29kTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tejas/source/repos/Project-Studio/UTR WebApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/tejas/source/repos/Project-Studio/UTR WebApplication/Views/Home/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tejas/source/repos/Project-Studio/UTR WebApplication/Views/Home/TwofectorAuth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUd29mZWN0b3JBdXRoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/tejas/source/repos/Project-Studio/UTR WebApplication/Views/Shared/Error.cshtml]

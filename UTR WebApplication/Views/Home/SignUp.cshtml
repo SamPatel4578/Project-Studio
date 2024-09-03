@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: linear-gradient(to right, #000000, gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            width: 600px;
+            text-align: center;
+            position: relative;
+            margin-left: 380px;
+        }
+
+            .login-container::before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                right: -20px;
+                bottom: -20px;
+                left: -20px;
+                border-radius: 15px;
+                z-index: -1;
+            }
+
+            .login-container h1 {
+                margin-bottom: 40px;
+                font-size: 28px;
+                color: #333;
+            }
+
+            .login-container label {
+                font-size: 16px;
+                color: #555;
+                display: block;
+                text-align: left;
+                margin-bottom: 10px;
+            }
+
+            .login-container input {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0 25px 0;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+                .login-container input:focus {
+                    border-color: black;
+                    outline: none;
+                    box-shadow: 0 0 8px rgba(78, 84, 200, 0.2);
+                }
+
+            .login-container button {
+                background-color: gray;
+                color: white;
+                border: none;
+                padding: 15px;
+                width: 100%;
+                border-radius: 5px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .login-container button:hover {
+                    background-color: black;
+                }
+
+            .login-container .forgot-password {
+                display: block;
+                margin-top: 20px;
+                font-size: 14px;
+                color: #555;
+                text-decoration: none;
+            }
+
+                .login-container .forgot-password:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>SIGNUP</h1>
+        <form id="Form1" action="SignUp.php" method="post">
+            <label for="Name">Name</label>
+            <input type="text" placeholder="Enter Name" name="Name" required>
+            <label for="username">Email</label>
+            <input type="text" placeholder="Email" name="Email" required>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <label for="password">Confirm Password</label>
+            <input type="password" placeholder="Enter Password Again" name="Confirm password" required>
+            <button type="submit">SignUp</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\wwwroot\css\site.css" asp-append-version="true" />
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <title>Login</title>
     <style>
@@ -19,7 +19,7 @@
             margin: 0;
         }
 
-        .login-container {
+        .TFA-container {
             background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -31,7 +31,7 @@
             margin-left: 380px;
         }
 
-            .login-container::before {
+            .TFA-container::before {
                 content: '';
                 position: absolute;
                 top: -20px;
@@ -42,14 +42,14 @@
                 z-index: -1;
             }
 
-            .login-container h1 {
+            .TFA-container h1 {
                 margin-bottom: 50px;
                 font-size: 32px;
                 color: #333;
                 font-weight: 25;
             }
 
-            .login-container label {
+            .TFA-container label {
                 font-size: 16px;
                 color: #555;
                 display: block;
@@ -57,7 +57,7 @@
                 margin-bottom: 10px;
             }
 
-            .login-container input {
+            .TFA-container input {
                 width: 100%;
                 padding: 12px;
                 margin: 10px 0 25px 0;
@@ -66,13 +66,13 @@
                 font-size: 16px;
             }
 
-            .login-container input:focus {
-                border-color: black;
-                outline: none;
-                box-shadow: 0 0 8px rgba(78, 84, 200, 0.2);
-            }
+                .TFA-container input:focus {
+                    border-color: black;
+                    outline: none;
+                    box-shadow: 0 0 8px rgba(78, 84, 200, 0.2);
+                }
 
-            .login-container button {
+            .TFA-container button {
                 background-color: gray;
                 color: white;
                 border: none;
@@ -84,15 +84,14 @@
                 transition: background-color 0.3s ease;
             }
 
-            .login-container button:hover {
-                background-color: black;
-            }
-
+                .TFA-container button:hover {
+                    background-color: black;
+                }
     </style>
 </head>
 
 <body>
-    <div class="login-container">
+    <div class="TFA-container">
         <h1>TWO-FACTOR AUTHENTICATION</h1>
         <form id="Form1" action="SignUp.php" method="post">
             <label for="password" style="font-size:20px;">↓ OTP PIN ↓</label>

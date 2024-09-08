@@ -1,22 +1,111 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
+
+    ViewBag.HideFooter = true;
 }
 
-<style>
-    body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: white;
-        background: linear-gradient(to right, #000000, gray);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+          
+        }
 
-<h1 style="text-align: center; padding-top:10px;">@ViewData["Title"]</h1>
 
-<br/>
+        .content {
+            background-color: transparent;
+            padding: 30px;
+            padding-top: 0px;
+            border-radius: 10px;
+            max-width: 900px;
+            width: 100%;
+            color: white;
+            margin: 50px auto;
+        }
 
-<p style="text-align: center;">Use this page to detail your site's privacy policy.</p>
+        h1 {
+            text-align: center;
+            padding-bottom: 10px;
+            color: black;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: black;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+            color: black;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: black;
+        }
+
+        footer{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page-Specific Content -->
+    <div class="content">
+        <h1>@ViewData["Title"]</h1>
+
+        <h2>Introduction</h2>
+        <p>Your privacy is important to us. This privacy policy explains how we collect, use, and protect your information when you use our services.</p>
+
+        <h2>Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+        <ul>
+            <li>Personal identification information (Name, email address, phone number, etc.)</li>
+            <li>Payment and transaction details</li>
+            <li>Technical data such as IP addresses and browser types</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+            <li>To provide and maintain our services</li>
+            <li>To communicate with you about updates or promotions</li>
+            <li>To process transactions and payment information</li>
+            <li>To improve our website based on user feedback</li>
+        </ul>
+
+        <h2>How We Protect Your Information</h2>
+        <p>We implement a variety of security measures to maintain the safety of your personal information when you submit, access, or use your personal data on our platform.</p>
+
+        <h2>Terms and Conditions</h2>
+        <p>By accessing and using our website, you agree to be bound by the following terms and conditions:</p>
+        <ul>
+            <li>You may not use the site for any unlawful purpose.</li>
+            <li>All content on this site is the property of the company unless stated otherwise. You may not reuse or redistribute it without permission.</li>
+            <li>We reserve the right to modify or discontinue the website or its services at any time without notice.</li>
+            <li>All personal information you provide will be treated in accordance with our privacy policy.</li>
+        </ul>
+
+        <h2>Changes to This Policy</h2>
+        <p>We reserve the right to update this privacy policy and the terms and conditions at any time. Changes will be effective immediately upon posting on this page. We encourage you to review the policy periodically for updates.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions regarding this privacy policy or the terms and conditions, feel free to contact us at support@utrwebapplication.com.</p>
+    </div>
+
+</body>
+</html>

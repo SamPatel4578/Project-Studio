@@ -1,4 +1,11 @@
+using UTR_WebApplication.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<UtrContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("UtrContext") ??
+    throw new InvalidOperationException("Connection string 'UtrContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

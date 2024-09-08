@@ -6,6 +6,8 @@ C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\U
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\UTR WebApplication.runtimeconfig.json
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\UTR WebApplication.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\UTR WebApplication.pdb
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Humanizer.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
@@ -29,17 +31,29 @@ C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\M
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.JSInterop.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
@@ -67,10 +81,12 @@ C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\S
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Security.Permissions.dll
-C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\System.Windows.Extensions.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\ar\Humanizer.resources.dll
@@ -211,8 +227,15 @@ C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\r
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\UTR WebApplication.csproj.AssemblyReference.cache
@@ -234,7 +257,7 @@ C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\s
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\scopedcss\bundle\UTR WebApplication.styles.css
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\scopedcss\projectbundle\UTR WebApplication.bundle.scp.css
-C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\UTR WebApplication.csproj.CopyComplete
+C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\UTR WebA.725639A6.Up2Date
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\UTR WebApplication.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\refint\UTR WebApplication.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\obj\Debug\net8.0\UTR WebApplication.pdb

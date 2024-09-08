@@ -4,41 +4,89 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - UTR_WebApplication</title>
+    <title>@ViewBag.Title UTR</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/UTR_WebApplication.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="~/logo.ico" type="image/x-icon">
     <style>
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 1000;
-            background-color: #f8f9fa;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding-right:50px;
         }
-
+            
+            .navbar ul li a:hover{
+                display:block;
+                background-color: lightgray;
+            }
         body {
             padding-top: 56px;
         }
 
-        footer {
+        footer{
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #f8f9fa;
+            background-color: transparent;
             padding: 10px 0;
-            text-align: center;
-            border-top: 1px solid #e7e7e7;
-            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            text-align:center;
         }
 
         .container-fluid {
             max-width: 2000px;
             margin: 0 auto;
         }
+
+        img{
+            margin-left:40px;
+            width:100px;
+            height:auto;
+            padding:0px;
+        }
+
+        .fa {
+            padding:10px;
+            margin:5px;
+            font-size: 30px;
+            width: 30px;
+            height:auto;
+            float:right;
+            text-decoration: none;
+            border-radius: 20%;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+                color:white;
+            }
+
+            .fa-facebook {
+                background: #3B5998;
+                color: white;
+            }
+
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+            }
+
+            .fa-google {
+                background: #dd4b39;
+                color: white;
+            }
+
+            .fa-instagram {
+                background: #f40083;
+                color: white;
+            }
+
     </style>
 </head>
 
@@ -46,13 +94,13 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">UTR_WebApplication</a>
+                <a class="" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/logo.ico" alt="logo" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex">
+                <div class="ml-auto">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -65,9 +113,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SignUp">SignUp</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TwofectorAuth">TwofectorAuth</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FoodMenu">FoodMenu</a>
@@ -84,11 +129,19 @@
         </main>
     </div>
 
-    <footer class="footer text-muted">
-        <div class="container">
+    @if (ViewBag.HideFooter == null || ViewBag.HideFooter == false)
+    {
+        <footer class="footer">
+            <div class="container">
             &copy; 2024 - UTR_WebApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-facebook"></a>
         </div>
-    </footer>
+       
+        </footer>
+    }
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

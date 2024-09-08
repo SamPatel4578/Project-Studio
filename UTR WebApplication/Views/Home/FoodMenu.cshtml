@@ -1,96 +1,166 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    ViewBag.HideFooter = true;
+}
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-    <title>Login</title>
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Food Menu</title>
     <style>
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            background: linear-gradient(to right, #000000, gray);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .menu-box {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            height: 180px;
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
             border-radius: 5px;
-            margin-bottom: 15px;
+            margin: 20px;
+            padding: 20px;
+            width: 300px; 
+            height: 300px; 
+        }
+            .menu-box:hover{
+                background-color: lightblue;
+            }
+
+            .menu-box img {
+                max-height: 150px;
+                object-fit: cover;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+        .menu-title {
+            font-size: 18px;
+            font-weight: bold;
         }
 
-        .menu-box:hover {
-            background-color: #e9ecef;
-            cursor: pointer;
+        .menu-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #28a745;
         }
-
-
     </style>
 </head>
-
 <body>
-    <div class="container mt-3">
+    <!-- Page-Specific Content -->
+    <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 1</div>
+
+            <h1 style="margin-top:60px; margin-bottom:20px;color:black; text-align:center;"><strong>FOODMENU</strong></h1>
+
+            <div class="container mt-3">
+                <div class="row">
+                    <!-- Menu Item 1 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/burger.jpg" alt="Burger">
+                            <div class="menu-title">Classic Burger</div>
+                            <div class="menu-description">Juicy beef patty with cheese, lettuce, and tomato.</div>
+                            <div class="menu-price">$8.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/pizza.jpg" alt="Pizza">
+                            <div class="menu-title">Margherita Pizza</div>
+                            <div class="menu-description">Tomato, mozzarella, and fresh basil.</div>
+                            <div class="menu-price">$12.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/pasta.jpg" alt="Pasta">
+                            <div class="menu-title">Creamy Alfredo Pasta</div>
+                            <div class="menu-description">Rich and creamy Alfredo sauce with fettuccine.</div>
+                            <div class="menu-price">$10.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/salad.jpg" alt="Salad">
+                            <div class="menu-title">Caesar Salad</div>
+                            <div class="menu-description">Crisp romaine lettuce with Caesar dressing.</div>
+                            <div class="menu-price">$6.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 5 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/sushi.jpg" alt="Sushi">
+                            <div class="menu-title">Sushi Platter</div>
+                            <div class="menu-description">A variety of fresh sushi rolls.</div>
+                            <div class="menu-price">$14.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 6 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/tacos.jpg" alt="Tacos">
+                            <div class="menu-title">Beef Tacos</div>
+                            <div class="menu-description">Soft tortillas filled with seasoned beef.</div>
+                            <div class="menu-price">$9.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 7 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/steak.jpg" alt="Steak">
+                            <div class="menu-title">Grilled Steak</div>
+                            <div class="menu-description">Tender steak grilled to perfection.</div>
+                            <div class="menu-price">$18.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 8 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/icecream.jpg" alt="Ice Cream">
+                            <div class="menu-title">Ice Cream Sundae</div>
+                            <div class="menu-description">Vanilla ice cream with chocolate sauce and sprinkles.</div>
+                            <div class="menu-price">$5.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 9 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/icecream.jpg" alt="Ice Cream">
+                            <div class="menu-title">Ice Cream Sundae</div>
+                            <div class="menu-description">Vanilla ice cream with chocolate sauce and sprinkles.</div>
+                            <div class="menu-price">$5.99</div>
+                        </div>
+                    </div>
+                    <!-- Menu Item 10 -->
+                    <div class="col-md-3">
+                        <div class="menu-box">
+                            <img src="images/icecream.jpg" alt="Ice Cream">
+                            <div class="menu-title">Ice Cream Sundae</div>
+                            <div class="menu-description">Vanilla ice cream with chocolate sauce and sprinkles.</div>
+                            <div class="menu-price">$5.99</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 2</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 3</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 4</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 5</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 6</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 7</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 8</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 9</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 10</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 11</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 12</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 13</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 14</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 15</div>
-            </div>
-            <div class="col-md-3">
-                <div class="menu-box">Menu Item 16</div>
-            </div>
+
+            <!-- Add additional menu items here -->
         </div>
     </div>
+
 </body>
 </html>

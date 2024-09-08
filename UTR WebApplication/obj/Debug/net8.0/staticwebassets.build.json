@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/8i0VzWCCb98Bk4YbfBg/zHYviBy7UmXuwmZe8X+NJ4=",
+  "Hash": "aVdVGYf6Ymajlqh+Pj00kiP54d20QE0KzHDwWhnpKW0=",
   "Source": "UTR WebApplication",
   "BasePath": "_content/UTR WebApplication",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\wwwroot\\logo.ico",
+      "SourceId": "UTR WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\wwwroot\\",
+      "BasePath": "_content/UTR WebApplication",
+      "RelativePath": "logo.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.ico"
     }
   ]
 }

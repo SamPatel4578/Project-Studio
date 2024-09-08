@@ -10,22 +10,23 @@ using UTR_WebApplication.Models;
 
 namespace UTR_WebApplication.Controllers
 {
-    public class MenuItemsController : Controller
+    public class UsersController : Controller
     {
         private readonly UtrContext _context;
 
-        public MenuItemsController(UtrContext context)
+        public UsersController(UtrContext context)
         {
             _context = context;
         }
 
-        // GET: MenuItems
+        // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.MenuItems.ToListAsync());
+            var utrContext = _context.Users.Include(u => u.Role);
+            return View(await utrContext.ToListAsync());
         }
 
-        // GET: MenuItems/Details/5
+        // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +34,42 @@ namespace UTR_WebApplication.Controllers
                 return NotFound();
             }
 
-            var menuItem = await _context.MenuItems
-                .FirstOrDefaultAsync(m => m.MenuItemId == id);
-            if (menuItem == null)
+            var user = await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(m => m.UserId == id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return View(menuItem);
+            return View(user);
         }
 
-        // GET: MenuItems/Create
+        // GET: Users/Create
         public IActionResult Create()
         {
+            ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId");
             return View();
         }
 
-        // POST: MenuItems/Create
+        // POST: Users/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MenuItemId,ItemName,Description,Price,ImageUrl")] MenuItem menuItem)
+        public async Task<IActionResult> Create([Bind("UserId,FirstName,LastName,Email,PhoneNumber,Address,RoleId")] User user)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(menuItem);
+                _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(menuItem);
+            ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
+            return View(user);
         }
 
-        // GET: MenuItems/Edit/5
+        // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +77,23 @@ namespace UTR_WebApplication.Controllers
                 return NotFound();
             }
 
-            var menuItem = await _context.MenuItems.FindAsync(id);
-            if (menuItem == null)
+            var user = await _context.Users.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
-            return View(menuItem);
+            ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
+            return View(user);
         }
 
-        // POST: MenuItems/Edit/5
+        // POST: Users/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MenuItemId,ItemName,Description,Price,ImageUrl")] MenuItem menuItem)
+        public async Task<IActionResult> Edit(int id, [Bind("UserId,FirstName,LastName,Email,PhoneNumber,Address,RoleId")] User user)
         {
-            if (id != menuItem.MenuItemId)
+            if (id != user.UserId)
             {
                 return NotFound();
             }
@@ -97,12 +102,12 @@ namespace UTR_WebApplication.Controllers
             {
                 try
                 {
-                    _context.Update(menuItem);
+                    _context.Update(user);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!MenuItemExists(menuItem.MenuItemId))
+                    if (!UserExists(user.UserId))
                     {
                         return NotFound();
                     }
@@ -113,10 +118,11 @@ namespace UTR_WebApplication.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(menuItem);
+            ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
+            return View(user);
         }
 
-        // GET: MenuItems/Delete/5
+        // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,34 +130,35 @@ namespace UTR_WebApplication.Controllers
                 return NotFound();
             }
 
-            var menuItem = await _context.MenuItems
-                .FirstOrDefaultAsync(m => m.MenuItemId == id);
-            if (menuItem == null)
+            var user = await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(m => m.UserId == id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return View(menuItem);
+            return View(user);
         }
 
-        // POST: MenuItems/Delete/5
+        // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var menuItem = await _context.MenuItems.FindAsync(id);
-            if (menuItem != null)
+            var user = await _context.Users.FindAsync(id);
+            if (user != null)
             {
-                _context.MenuItems.Remove(menuItem);
+                _context.Users.Remove(user);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool MenuItemExists(int id)
+        private bool UserExists(int id)
         {
-            return _context.MenuItems.Any(e => e.MenuItemId == id);
+            return _context.Users.Any(e => e.UserId == id);
         }
     }
 }

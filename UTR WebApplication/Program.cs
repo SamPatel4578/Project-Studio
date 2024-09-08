@@ -1,5 +1,5 @@
-using UTR_WebApplication.Models;
 using Microsoft.EntityFrameworkCore;
+using UTR_WebApplication.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

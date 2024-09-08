@@ -42,13 +42,15 @@ namespace UTR_WebApplication.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Register([Bind("FirstName,LastName,Email,PhoneNumber,Address,RoleId")] User user)
+        public IActionResult Register([Bind("FirstName,LastName,Email,PhoneNumber,Address,RoleId")] User user, string password)
         {
             if (ModelState.IsValid)
             {
-                var existingUser = _context.Users.FirstOrDefault(u => u.Email == user.Email);
-                if (existingUser != null)
+                // Check if the email already exists in the LoginDetail table
+                var existingLoginDetail = _context.LoginDetails.FirstOrDefault(ld => ld.Email == user.Email);
+                if (existingLoginDetail != null)
                 {
+                    // Email already exists, show an error
                     ModelState.AddModelError("", "Email is already in use.");
                     ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
                     return View("SignUp", user);
@@ -56,21 +58,52 @@ namespace UTR_WebApplication.Controllers
 
                 try
                 {
+                    // Add the user to the context and save changes to the database
                     _context.Users.Add(user);
                     _context.SaveChanges();
+
+                    // Add debugging info to confirm the process
+                    System.Diagnostics.Debug.WriteLine("User saved successfully with UserId: " + user.UserId);
+
+                    // After saving the user, create a new LoginDetail record
+                    var loginDetail = new LoginDetail
+                    {
+                        UserId = user.UserId,  // Associate with the newly created User
+                        Email = user.Email,    // Store email
+                        PasswordHash = password,  // Store the password directly (no hashing)
+                        TwoFactorEnabled = false,  // Default to not using two-factor authentication
+                        TermsAccepted = true  // Assuming the user accepted the terms during signup
+                    };
+
+                    // Add debugging info for login details
+                    System.Diagnostics.Debug.WriteLine("LoginDetail prepared for UserId: " + loginDetail.UserId + " with Email: " + loginDetail.Email);
+
+                    // Add login details to the context and save changes
+                    _context.LoginDetails.Add(loginDetail);
+                    _context.SaveChanges();
+
+                    // Debug info after saving login details
+                    System.Diagnostics.Debug.WriteLine("LoginDetail saved successfully for UserId: " + loginDetail.UserId);
                 }
                 catch (DbUpdateException ex)
                 {
+                    // Handle any errors related to saving data to the database
+                    System.Diagnostics.Debug.WriteLine("Error: " + ex.Message);
                     ModelState.AddModelError("", "There was a problem saving data. Please try again later.");
                     ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
                     return View("SignUp", user);
                 }
 
+                // Redirect to the login page after successful signup
                 return RedirectToAction("Login");
             }
+
+            // If ModelState is not valid, reload the SignUp view with the input data
             ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
             return View("SignUp", user);
         }
+
+
 
 
         [HttpGet]

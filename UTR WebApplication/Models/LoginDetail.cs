@@ -9,6 +9,8 @@ public partial class LoginDetail
 
     public int? UserId { get; set; }
 
+    public required string Email { get; set; }
+
     public string? PasswordHash { get; set; }
 
     public bool? TwoFactorEnabled { get; set; }

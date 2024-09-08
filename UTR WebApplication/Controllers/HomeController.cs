@@ -33,6 +33,42 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(LoginDetail model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Find the user by email
+                var loginDetail = _context.LoginDetails.FirstOrDefault(u => u.Email == model.Email);
+
+                if (loginDetail != null)
+                {
+                    // Compare the entered password with the stored password
+                    if (loginDetail.PasswordHash == model.PasswordHash)
+                    {
+                        // Handle successful login
+                        // You can add logic for setting up session, cookies, etc.
+                        return RedirectToAction("FoodMenu", "Home");
+                    }
+                    else
+                    {
+                        // If the password is incorrect
+                        ModelState.AddModelError("", "Invalid password.");
+                    }
+                }
+                else
+                {
+                    // If no user is found with the entered email
+                    ModelState.AddModelError("", "Invalid email.");
+                }
+            }
+
+            // If we get to this point, something failed, redisplay the form
+            return View(model);
+        }
+
+
         [HttpGet]
         public IActionResult SignUp()
         {

@@ -1,0 +1,87 @@
+﻿@model UTR_WebApplication.Models.PaymentDetail
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .payment-container {
+            margin: 35px auto;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.7);
+        }
+
+            .payment-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background-color: #5a6268;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="payment-container">
+            <h2>Payment Form</h2>
+            <form asp-action="ProcessPayment" method="post">
+                <div class="form-group">
+                    <label for="UserId">User ID</label>
+                    <input type="text" class="form-control" id="UserId" placeholder="Enter User ID" asp-for="UserId">
+                </div>
+
+                <div class="form-group">
+                    <label for="PaymentMethod">Payment Method</label>
+                    <select class="form-control" id="PaymentMethod" asp-for="PaymentMethod">
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="Debit Card">Debit Card</option>
+                        <option value="PayPal">PayPal</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="CardLastDigits">Card Last 4 Digits</label>
+                    <input type="text" class="form-control" id="CardLastDigits" placeholder="Enter Last 4 Digits of Card" asp-for="CardLastDigits">
+                </div>
+
+                <div class="form-group">
+                    <label for="Amount">Amount</label>
+                    <input type="text" class="form-control" id="Amount" placeholder="Enter Payment Amount" asp-for="Amount">
+                </div>
+
+                <div class="form-group">
+                    <label for="PaymentStatus">Payment Status</label>
+                    <select class="form-control" id="PaymentStatus" asp-for="PaymentStatus">
+                        <option value="Pending">Pending</option>
+                        <option value="Success">Success</option>
+                        <option value="Failed">Failed</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    @*     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script> *@
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

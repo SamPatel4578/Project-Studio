@@ -33,6 +33,13 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+
+        public IActionResult Payment()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoginDetail model)

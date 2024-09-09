@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dtpat\\source\\Repos\\Project-Studio\\UTR WebApplication\\",
+  "WorkspaceRootPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\dtpat\\source\\repos\\project-studio\\utr webapplication\\views\\home\\foodmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\tejas\\source\\repos\\project-studio\\utr webapplication\\views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\tejas\\source\\repos\\project-studio\\utr webapplication\\views\\home\\foodmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\foodmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -23,12 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Payment.cshtml",
+              "DocumentMoniker": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Payment.cshtml",
+              "ToolTip": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
+              "RelativeToolTip": "Views\\Home\\Payment.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T13:11:48.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FoodMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\dtpat\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\FoodMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\FoodMenu.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\FoodMenu.cshtml",
-              "ToolTip": "C:\\Users\\dtpat\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\FoodMenu.cshtml",
+              "ToolTip": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\FoodMenu.cshtml",
               "RelativeToolTip": "Views\\Home\\FoodMenu.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-09T03:49:40.698Z",
               "EditorCaption": ""

@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/tejas/source/repos/Project-Studio/UTR WebApplication/Views/Home/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/tejas/source/repos/Project-Studio/UTR WebApplication/Views/Home/FoodMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb29kTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

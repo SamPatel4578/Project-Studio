@@ -1,4 +1,4 @@
-﻿@model IEnumerable<UTR_WebApplication.Models.MenuItem>
+﻿@* @model IEnumerable<UTR_WebApplication.Models.MenuItem>
 
 @{
     ViewBag.HideFooter = true;
@@ -83,5 +83,118 @@
         </div>
     </div>
 
+</body>
+</html> *@
+
+@model IEnumerable<UTR_WebApplication.Models.MenuItem>
+
+@{
+    ViewBag.HideFooter = true;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Food Menu</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .menu-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 20px;
+            width: 300px;
+            height: 300px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .menu-box:hover {
+                background-color: lightblue;
+            }
+
+            .menu-box img {
+                max-height: 150px;
+                object-fit: cover;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                margin-right: 35px;
+            }
+
+        .menu-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .menu-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .cart-link {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+            .cart-link:hover {
+                background-color: #0056b3;
+            }
+    </style>
+    <script>
+        function addToCart(itemName, itemPrice, imageUrl) {
+            let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+            cart.push({ name: itemName, price: itemPrice, imageUrl: imageUrl });
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            alert(itemName + " has been added to the cart.");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 style="margin-top:60px; margin-bottom:20px;color:black; text-align:center;"><strong>FOOD MENU</strong></h1>
+
+            <div class="container mt-3">
+                <div class="row">
+                    @foreach (var item in Model)
+
+                    {
+                        <div class="col-md-3">
+                            <div class="menu-box" onclick="addToCart('@item.ItemName', '@item.Price', '@item.ImageUrl')">
+                                <img src="@item.ImageUrl" alt="@item.ItemName">
+                                <div class="menu-title">@item.ItemName</div>
+                                <div class="menu-description">@item.Description</div>
+                                <div class="menu-price">@String.Format("{0:C}", item.Price)</div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -40,6 +40,11 @@ namespace UTR_WebApplication.Controllers
         }
 
 
+        public IActionResult Cart()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoginDetail model)

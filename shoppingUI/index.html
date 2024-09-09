@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTR Food Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="UTR.jpg" alt="UTR Logo">
+        </div>
+        <h1>UTR Food Shop</h1>
+        <div class="cart">
+            <span id="cart-count">0</span> items in cart | Total: $<span id="total-price">0.00</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><input type="text" placeholder="Search..."></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="shop-section">
+            <aside>
+                <h3>Shop Home</h3>
+                <ul>
+                    <li><a href="#">Specials</a></li>
+                    <li><a href="#">My Last Order</a></li>
+                    <li><a href="#">My Frequent Purchases</a></li>
+                    <li><a href="#">Order Calendar</a></li>
+                </ul>
+
+                <h3>All Departments</h3>
+                <ul>
+                    <li><a href="#">Fruit & Veg</a></li>
+                    <li><a href="#">Bakery</a></li>
+                    <li><a href="#">Deli</a></li>
+                    <li><a href="#">Fresh Meat</a></li>
+                    <li><a href="#">Dairy</a></li>
+                </ul>
+            </aside>
+
+            <div class="product-container">
+                <!-- 之前的三样商品 -->
+                <div class="product" data-name="Tomatoes" data-price="0.55">
+                    <img src="tomatoes.jpg" alt="Tomatoes">
+                    <h2>Tomatoes Per Kg</h2>
+                    <p><span class="old-price">$5.90</span> <span class="new-price">$0.55</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product" data-name="Milk" data-price="5.40">
+                    <img src="milk.jpg" alt="Milk">
+                    <h2>Foodland Full Cream Milk 3L</h2>
+                    <p><span class="old-price">$5.55</span> <span class="new-price">$5.40</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product" data-name="Bread" data-price="4.40">
+                    <img src="bread.jpg" alt="Bread">
+                    <h2>Wonder White Sliced Bread 700g</h2>
+                    <p><span class="old-price">$5.35</span> <span class="new-price">$4.40</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- 新添加的商品 -->
+                <div class="product" data-name="Don Leg Ham" data-price="6.10">
+                    <img src="don_leg_ham.jpg" alt="Don Leg Ham">
+                    <h2>Don® Leg Ham Shaved 200g</h2>
+                    <p><span class="old-price">$6.40</span> <span class="new-price">$6.10</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product" data-name="Pizza Cheese" data-price="7.00">
+                    <img src="pizza_cheese.jpg" alt="Pizza Cheese">
+                    <h2>Perfect Italiano Pizza Cheese 450g</h2>
+                    <p><span class="old-price">$9.50</span> <span class="new-price">$7.00</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product" data-name="Dorsogna Ham" data-price="7.70">
+                    <img src="dorsogna_ham.jpg" alt="Dorsogna Ham">
+                    <h2>Dorsogna Champagne Ham 400g</h2>
+                    <p><span class="old-price">$10.00</span> <span class="new-price">$7.70</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <div class="product" data-name="Shredded Cheese" data-price="7.70">
+                    <img src="shredded_cheese.jpg" alt="Shredded Cheese">
+                    <h2>Black & Gold Tasty Shredded Cheese 500g</h2>
+                    <p><span class="old-price">$8.00</span> <span class="new-price">$7.70</span></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact Us: <a href="mailto:info@utrshop.com">info@utrshop.com</a></p>
+        <p>&copy; 2024 UTR Food Shop</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

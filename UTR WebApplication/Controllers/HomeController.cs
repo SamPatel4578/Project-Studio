@@ -223,10 +223,12 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
-        public ActionResult FoodMenu()
+        public IActionResult FoodMenu()
         {
-            return View();
+            var menuItems = _context.MenuItems.ToList();
+            return View(menuItems);
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

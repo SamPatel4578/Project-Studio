@@ -139,6 +139,8 @@
             }
 
             document.getElementById('totalPrice').innerText = `Total: $${total.toFixed(2)}`;
+
+            sessionStorage.setItem('totalAmount', total.toFixed(2));
         }
 
         function increaseQuantity(index) {
@@ -191,7 +193,6 @@
         <a class="cart-total btn btn-primary" style="float: right; color: white; margin-top:20px;" href="/Home/FoodMenu">Back to Menu</a>
         <div class="cart-total" style="padding-top: 30px; max-width:150px;" id="totalPrice">Total: $0.00</div>
 
-        <!-- Button Group for Pick-Up, Delivery, and Checkout -->
         <div class="button-group">
             <button class="btn" onclick="selectPickup()">Pick-Up</button>
             <button class="btn" onclick="selectDelivery()">Delivery</button>
@@ -200,16 +201,19 @@
         <br />
 
 
-        <!-- Address input for delivery -->
-        <div class="address-input" id="addressContainer">
-            <label for="address">Enter your address for delivery:</label>
-            <input type="text" id="address" placeholder="Your address...">
-        </div>
+        <form action="/Home/Payment" method="GET">
+            <div class="address-input" id="addressContainer">
+                <label for="address">Enter your address for delivery:</label>
+                <input type="text" id="address" name="address" placeholder="Your address...">
+            </div>
 
-        <br />
-        <br />
+            <br />
+            <br />
 
-        <a class="btn btn-secondary" style="padding:20px 580px 20px 630px; font-size: 18px;" href="/Home/Payment">Checkout</a>
+            <button type="submit" class="btn btn-secondary" style="padding:20px 580px 20px 630px; font-size: 18px;">
+                Checkout
+            </button>
+        </form>
 
         
     </div>

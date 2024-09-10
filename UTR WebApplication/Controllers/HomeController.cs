@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Diagnostics;
 using UTR_WebApplication.Data;
 using UTR_WebApplication.Models;
@@ -36,7 +37,7 @@ namespace UTR_WebApplication.Controllers
 
         public IActionResult Payment()
         {
-            return View();
+            return View();  
         }
 
 
@@ -46,37 +47,57 @@ namespace UTR_WebApplication.Controllers
         }
 
         [HttpPost]
+        public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
+        {
+            if (string.IsNullOrEmpty(paymentData.CardholderName) || string.IsNullOrEmpty(paymentData.CardLastDigits))
+            {
+                return Content("Invalid cardholder name or card number.");
+            }
+
+            paymentData.PaymentStatus = "Success";
+
+            if (SavePaymentDetails == "yes")
+            {
+                _context.PaymentDetails.Add(paymentData);
+                _context.SaveChanges();
+            }
+
+            return Ok();
+        }
+
+
+        private int GetUserId()
+        {
+            return 1; 
+        }
+
+
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoginDetail model)
         {
             if (ModelState.IsValid)
             {
-                // Find the user by email
                 var loginDetail = _context.LoginDetails.FirstOrDefault(u => u.Email == model.Email);
 
                 if (loginDetail != null)
                 {
-                    // Compare the entered password with the stored password
                     if (loginDetail.PasswordHash == model.PasswordHash)
                     {
-                        // Handle successful login
-                        // You can add logic for setting up session, cookies, etc.
+                        
                         return RedirectToAction("FoodMenu", "Home");
                     }
                     else
                     {
-                        // If the password is incorrect
                         ModelState.AddModelError("", "Invalid password.");
                     }
                 }
                 else
                 {
-                    // If no user is found with the entered email
                     ModelState.AddModelError("", "Invalid email.");
                 }
             }
 
-            // If we get to this point, something failed, redisplay the form
             return View(model);
         }
 
@@ -94,11 +115,9 @@ namespace UTR_WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Check if the email already exists in the LoginDetail table
                 var existingLoginDetail = _context.LoginDetails.FirstOrDefault(ld => ld.Email == user.Email);
                 if (existingLoginDetail != null)
                 {
-                    // Email already exists, show an error
                     ModelState.AddModelError("", "Email is already in use.");
                     ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
                     return View("SignUp", user);
@@ -106,47 +125,38 @@ namespace UTR_WebApplication.Controllers
 
                 try
                 {
-                    // Add the user to the context and save changes to the database
                     _context.Users.Add(user);
                     _context.SaveChanges();
 
-                    // Add debugging info to confirm the process
                     System.Diagnostics.Debug.WriteLine("User saved successfully with UserId: " + user.UserId);
 
-                    // After saving the user, create a new LoginDetail record
                     var loginDetail = new LoginDetail
                     {
-                        UserId = user.UserId,  // Associate with the newly created User
-                        Email = user.Email,    // Store email
-                        PasswordHash = password,  // Store the password directly (no hashing)
-                        TwoFactorEnabled = false,  // Default to not using two-factor authentication
-                        TermsAccepted = true  // Assuming the user accepted the terms during signup
+                        UserId = user.UserId,  
+                        Email = user.Email,    
+                        PasswordHash = password,  
+                        TwoFactorEnabled = false,  
+                        TermsAccepted = true  
                     };
 
-                    // Add debugging info for login details
                     System.Diagnostics.Debug.WriteLine("LoginDetail prepared for UserId: " + loginDetail.UserId + " with Email: " + loginDetail.Email);
 
-                    // Add login details to the context and save changes
                     _context.LoginDetails.Add(loginDetail);
                     _context.SaveChanges();
 
-                    // Debug info after saving login details
                     System.Diagnostics.Debug.WriteLine("LoginDetail saved successfully for UserId: " + loginDetail.UserId);
                 }
                 catch (DbUpdateException ex)
                 {
-                    // Handle any errors related to saving data to the database
                     System.Diagnostics.Debug.WriteLine("Error: " + ex.Message);
                     ModelState.AddModelError("", "There was a problem saving data. Please try again later.");
                     ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
                     return View("SignUp", user);
                 }
 
-                // Redirect to the login page after successful signup
                 return RedirectToAction("Login");
             }
 
-            // If ModelState is not valid, reload the SignUp view with the input data
             ViewData["RoleId"] = new SelectList(_context.UserRoles, "RoleId", "RoleId", user.RoleId);
             return View("SignUp", user);
         }

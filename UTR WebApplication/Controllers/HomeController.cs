@@ -46,6 +46,11 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        public IActionResult Fuel()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
         {

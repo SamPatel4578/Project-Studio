@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\",
+  "WorkspaceRootPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\tejas\\source\\repos\\project-studio\\utr webapplication\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\tejas\\source\\repos\\project-studio\\utr webapplication\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,54 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Cart.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Cart.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Cart.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Cart.cshtml",
-              "RelativeToolTip": "Views\\Home\\Cart.cshtml",
-              "ViewState": "AgIAALQAAAAAAAAAAAAAAMAAAAB3AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\SignUp.cshtml",
+              "ToolTip": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\SignUp.cshtml",
+              "RelativeToolTip": "Views\\Home\\SignUp.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-11T03:45:19.174Z",
+              "WhenOpened": "2024-09-11T05:29:28.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PaymentSuccess.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentSuccess.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\PaymentSuccess.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentSuccess.cshtml",
-              "RelativeToolTip": "Views\\Home\\PaymentSuccess.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
+              "RelativeToolTip": "Views\\Home\\Profile.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwCEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-11T03:00:49.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Payment.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Payment.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
-              "RelativeToolTip": "Views\\Home\\Payment.cshtml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwH0AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-11T02:51:06.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAuwGkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T09:31:56.821Z",
+              "WhenOpened": "2024-09-11T05:06:23.012Z",
               "EditorCaption": ""
             }
           ]

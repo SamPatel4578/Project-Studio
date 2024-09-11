@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.HideFooter = true;
+}
+
+@model UTR_WebApplication.Models.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 450px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 90px;
+            margin-left: 400px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-detail {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+            .profile-detail label {
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: block;
+                color: #555;
+            }
+
+            .profile-detail span {
+                display: block;
+                padding: 10px;
+                background-color: #f1f1f1;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                color: #333;
+            }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <h2>User Profile</h2>
+
+        <div class="profile-detail">
+            <label>First Name:</label>
+            <span>@Model.FirstName</span>
+        </div>
+
+        <div class="profile-detail">
+            <label>Last Name:</label>
+            <span>@Model.LastName</span>
+        </div>
+
+        <div class="profile-detail">
+            <label>Email:</label>
+            <span>@Model.Email</span>
+        </div>
+
+        <div class="profile-detail">
+            <label>Phone Number:</label>
+            <span>@Model.PhoneNumber</span>
+        </div>
+
+        <div class="profile-detail">
+            <label>Address:</label>
+            <span>@Model.Address</span>
+        </div>
+
+        <div class="profile-detail">
+            <label>Password:</label>
+            <span>********</span> <!-- Masked for security reasons -->
+        </div>
+
+        <button class="btn-primary" onclick="window.location.href='@Url.Action("EditProfile", "User")'">Edit</button>
+    </div>
+
+</body>
+</html>

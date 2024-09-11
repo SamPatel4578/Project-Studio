@@ -291,7 +291,85 @@ namespace UTR_WebApplication.Controllers
             return View(menuItems);
         }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        // Action to display the user profile
+        public IActionResult Profile(int id)
+        {
+            var user = _context.Users
+                               .Where(u => u.UserId == id)
+                               .Select(u => new User
+                               {
+                                   UserId = u.UserId,
+                                   FirstName = u.FirstName,
+                                   LastName = u.LastName,
+                                   Email = u.Email,
+                                   PhoneNumber = u.PhoneNumber,
+                                   Address = u.Address
+                               })
+                               .FirstOrDefault();
 
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        // Action to edit the user profile (GET)
+        [HttpGet]
+        public IActionResult EditProfile(int id)
+        {
+            var user = _context.Users
+                               .Where(u => u.UserId == id)
+                               .Select(u => new User
+                               {
+                                   UserId = u.UserId,
+                                   FirstName = u.FirstName,
+                                   LastName = u.LastName,
+                                   Email = u.Email,
+                                   PhoneNumber = u.PhoneNumber,
+                                   Address = u.Address
+                               })
+                               .FirstOrDefault();
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        // Action to edit the user profile (POST)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditProfile(User model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = _context.Users.FirstOrDefault(u => u.UserId == model.UserId);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                // Update user details
+                user.FirstName = model.FirstName;
+                user.LastName = model.LastName;
+                user.Email = model.Email;
+                user.PhoneNumber = model.PhoneNumber;
+                user.Address = model.Address;
+
+                _context.SaveChanges();
+
+                return RedirectToAction("Profile", new { id = model.UserId });
+            }
+
+            return View(model);
+        }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Payment Successful";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .success-container {
+            margin: 35px auto;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .success-container h2 {
+            color: green;
+            margin-bottom: 20px;
+        }
+
+        .success-container img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #5a6268;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-container">
+            <h2>Payment Successful!</h2>
+            <img src="~/tick.png" alt="Success" style="margin-right:53px;"/>    
+            <p>Your payment has been processed successfully.</p>
+            <button class="btn btn-primary" id="viewInvoiceBtn">Send Invoice</button>
+           
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('viewInvoiceBtn').addEventListener('click', function () {
+            // Display an alert for the invoice
+            alert('Invoice has been sent to your email.');
+
+            window.location.href = '/Home/Index';
+        });
+    </script>
+</body>
+</html>
+

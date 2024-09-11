@@ -62,6 +62,25 @@ namespace UTR_WebApplication.Controllers
             return View(suppliers);
         }
 
+        //[HttpPost]
+        //public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
+        //{
+        //    if (string.IsNullOrEmpty(paymentData.CardholderName) || string.IsNullOrEmpty(paymentData.CardLastDigits))
+        //    {
+        //        return Content("Invalid cardholder name or card number.");
+        //    }
+
+        //    paymentData.PaymentStatus = "Success";
+
+        //    if (SavePaymentDetails == "yes")
+        //    {
+        //        _context.PaymentDetails.Add(paymentData);
+        //        _context.SaveChanges();
+        //    }
+
+        //    return Ok();
+        //}
+
         [HttpPost]
         public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
         {
@@ -78,9 +97,14 @@ namespace UTR_WebApplication.Controllers
                 _context.SaveChanges();
             }
 
-            return Ok();
+            // Redirect to the success page after payment is processed
+            return RedirectToAction("PaymentSuccess");
         }
 
+        public IActionResult PaymentSuccess()
+        {
+            return View();
+        }
 
         private int GetUserId()
         {

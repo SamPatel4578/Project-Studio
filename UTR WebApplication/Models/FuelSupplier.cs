@@ -11,5 +11,7 @@ public partial class FuelSupplier
 
     public string? FuelType { get; set; }
 
+    public string? ImageUrl { get; set; }
+
     public virtual ICollection<FuelOrder> FuelOrders { get; set; } = new List<FuelOrder>();
 }

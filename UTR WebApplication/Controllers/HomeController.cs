@@ -34,6 +34,10 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        public IActionResult StaffLogin()
+        {
+            return View();
+        }
 
         public IActionResult Payment()
         {

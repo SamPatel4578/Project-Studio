@@ -8184,19 +8184,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tejas\\.nuget\\packages\\": {}
+    "C:\\Users\\kxu39\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\kxu39\\Source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
       "projectName": "UTR WebApplication",
-      "projectPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
-      "packagesPath": "C:\\Users\\tejas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\obj\\",
+      "projectPath": "C:\\Users\\kxu39\\Source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "packagesPath": "C:\\Users\\kxu39\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kxu39\\Source\\Repos\\Project-Studio\\UTR WebApplication\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\tejas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kxu39\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8204,7 +8209,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8276,7 +8280,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

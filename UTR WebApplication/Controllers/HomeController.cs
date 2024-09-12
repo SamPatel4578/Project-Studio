@@ -1,8 +1,12 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Diagnostics;
+using System.Security.Claims;
 using UTR_WebApplication.Data;
 using UTR_WebApplication.Models;
 
@@ -39,17 +43,20 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Payment()
         {
             return View();  
         }
 
 
+        [Authorize]
         public IActionResult Cart()
         {
             return View();
         }
 
+        [Authorize]
         public ActionResult Fuel()
         {
             var suppliers = new List<FuelSupplier>
@@ -66,26 +73,9 @@ namespace UTR_WebApplication.Controllers
             return View(suppliers);
         }
 
-        //[HttpPost]
-        //public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
-        //{
-        //    if (string.IsNullOrEmpty(paymentData.CardholderName) || string.IsNullOrEmpty(paymentData.CardLastDigits))
-        //    {
-        //        return Content("Invalid cardholder name or card number.");
-        //    }
-
-        //    paymentData.PaymentStatus = "Success";
-
-        //    if (SavePaymentDetails == "yes")
-        //    {
-        //        _context.PaymentDetails.Add(paymentData);
-        //        _context.SaveChanges();
-        //    }
-
-        //    return Ok();
-        //}
 
         [HttpPost]
+        [Authorize]
         public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
         {
             if (string.IsNullOrEmpty(paymentData.CardholderName) || string.IsNullOrEmpty(paymentData.CardLastDigits))
@@ -101,10 +91,10 @@ namespace UTR_WebApplication.Controllers
                 _context.SaveChanges();
             }
 
-            // Redirect to the success page after payment is processed
             return RedirectToAction("PaymentSuccess");
         }
 
+        [Authorize]
         public IActionResult PaymentSuccess()
         {
             return View();
@@ -118,7 +108,7 @@ namespace UTR_WebApplication.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(LoginDetail model)
+        public async Task<IActionResult> Login(LoginDetail model, string returnUrl = null)
         {
             if (ModelState.IsValid)
             {
@@ -128,7 +118,29 @@ namespace UTR_WebApplication.Controllers
                 {
                     if (loginDetail.PasswordHash == model.PasswordHash)
                     {
-                        
+                        var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, loginDetail.Email) 
+                };
+
+                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                        var authProperties = new AuthenticationProperties
+                        {
+                            IsPersistent = true, 
+                            ExpiresUtc = DateTime.UtcNow.AddMinutes(30) 
+                        };
+
+                        await HttpContext.SignInAsync(
+                            CookieAuthenticationDefaults.AuthenticationScheme,
+                            new ClaimsPrincipal(claimsIdentity),
+                            authProperties);
+
+                        if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                        {
+                            return Redirect(returnUrl);
+                        }
+
                         return RedirectToAction("FoodMenu", "Home");
                     }
                     else
@@ -144,6 +156,18 @@ namespace UTR_WebApplication.Controllers
 
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("Index", "Home");
+        }
+
+
 
 
         [HttpGet]
@@ -289,14 +313,16 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult FoodMenu()
-        {
+        { 
             var menuItems = _context.MenuItems.ToList();
             return View(menuItems);
         }
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         // Action to display the user profile
+        [Authorize]
         public IActionResult Profile(int id)
         {
             var user = _context.Users
@@ -321,6 +347,7 @@ namespace UTR_WebApplication.Controllers
         }
 
         // Action to edit the user profile (GET)
+        [Authorize]
         [HttpGet]
         public IActionResult EditProfile(int id)
         {
@@ -358,7 +385,6 @@ namespace UTR_WebApplication.Controllers
                     return NotFound();
                 }
 
-                // Update user details
                 user.FirstName = model.FirstName;
                 user.LastName = model.LastName;
                 user.Email = model.Email;

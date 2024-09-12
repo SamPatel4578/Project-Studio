@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\",
+  "WorkspaceRootPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\kxu39\\source\\repos\\project-studio\\utr webapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\kxu39\\source\\repos\\project-studio\\utr webapplication\\views\\home\\stafflogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\stafflogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\kxu39\\source\\repos\\project-studio\\utr webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\kxu39\\source\\repos\\project-studio\\utr webapplication\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\kxu39\\source\\repos\\project-studio\\utr webapplication\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\stafflogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\stafflogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,49 +47,75 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T05:32:50.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:27:14.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwCUAAAAJAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T05:52:15.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "StaffLogin.cshtml",
-              "DocumentMoniker": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\StaffLogin.cshtml",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\StaffLogin.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\StaffLogin.cshtml",
-              "ToolTip": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\StaffLogin.cshtml",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\StaffLogin.cshtml",
               "RelativeToolTip": "Views\\Home\\StaffLogin.cshtml",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAG4AAAAiAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-11T05:50:54.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\appsettings.json",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-09-11T05:48:14.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "SignUp.cshtml",
-              "DocumentMoniker": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\SignUp.cshtml",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\SignUp.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\SignUp.cshtml",
-              "ToolTip": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\SignUp.cshtml",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\SignUp.cshtml",
               "RelativeToolTip": "Views\\Home\\SignUp.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -90,13 +124,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Profile.cshtml",
-              "DocumentMoniker": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Profile.cshtml",
-              "ToolTip": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
               "RelativeToolTip": "Views\\Home\\Profile.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAHAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-11T05:06:23.012Z",
               "EditorCaption": ""

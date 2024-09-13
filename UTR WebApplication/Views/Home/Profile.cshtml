@@ -2,10 +2,10 @@
     ViewBag.HideFooter = true;
 }
 
-@model UTR_WebApplication.Models.User
+@model Tuple<UTR_WebApplication.Models.User, UTR_WebApplication.Models.LoginDetail>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,44 +77,81 @@
                 background-color: #0056b3;
             }
     </style>
+    <script>
+        function toggleEdit() {
+            const editMode = document.getElementById('editMode').value === 'false';
+
+            document.getElementById('editMode').value = editMode;
+
+            document.querySelectorAll('.profile-detail span').forEach(span => {
+                span.style.display = editMode ? 'none' : 'block';
+            });
+
+            document.querySelectorAll('.profile-detail input').forEach(input => {
+                input.style.display = editMode ? 'block' : 'none';
+            });
+
+            document.querySelector('.password-fields').style.display = editMode ? 'block' : 'none';
+
+            document.querySelector('.btn-primary').style.display = editMode ? 'none' : 'inline-block';
+            document.querySelector('.btn-save').style.display = editMode ? 'inline-block' : 'none';
+        }
+    </script>
+
+
 </head>
 <body>
 
     <div class="profile-container">
         <h2>User Profile</h2>
+        <form method="post" action="@Url.Action("UpdateProfile", "Home")">
 
-        <div class="profile-detail">
-            <label>First Name:</label>
-            <span>@Model.FirstName</span>
-        </div>
+            <input type="hidden" name="UserId" value="@Model.Item1.UserId" />
 
-        <div class="profile-detail">
-            <label>Last Name:</label>
-            <span>@Model.LastName</span>
-        </div>
+            <div class="profile-detail">
+                <label>First Name:</label>
+                <span>@Model.Item1.FirstName</span>
+                <input type="text" name="FirstName" value="@Model.Item1.FirstName" style="display: none;">
+            </div>
 
-        <div class="profile-detail">
-            <label>Email:</label>
-            <span>@Model.Email</span>
-        </div>
+            <div class="profile-detail">
+                <label>Last Name:</label>
+                <span>@Model.Item1.LastName</span>
+                <input type="text" name="LastName" value="@Model.Item1.LastName" style="display: none;">
+            </div>
 
-        <div class="profile-detail">
-            <label>Phone Number:</label>
-            <span>@Model.PhoneNumber</span>
-        </div>
+            <div class="profile-detail">
+                <label>Email:</label>
+                <span>@Model.Item2.Email</span>
+                <input type="email" name="Email" value="@Model.Item1.Email" style="display: none;">
+            </div>
 
-        <div class="profile-detail">
-            <label>Address:</label>
-            <span>@Model.Address</span>
-        </div>
+            <div class="profile-detail">
+                <label>Phone Number:</label>
+                <span>@Model.Item1.PhoneNumber</span>
+                <input type="text" name="PhoneNumber" value="@Model.Item1.PhoneNumber" style="display: none;">
+            </div>
 
-        <div class="profile-detail">
-            <label>Password:</label>
-            <span>********</span>
-        </div>
+            <div class="profile-detail">
+                <label>Address:</label>
+                <span>@Model.Item1.Address</span>
+                <input type="text" name="Address" value="@Model.Item1.Address" style="display: none;">
+            </div>
 
-        <button class="btn-primary" onclick="window.location.href='@Url.Action("EditProfile", "User")'">Edit</button>
+            <div class="profile-detail password-fields">
+                <label>New Password:</label>
+                <span>***************</span>
+                <input type="password" name="NewPassword" value="@Model.Item2.PasswordHash" style="display: none;">
+            </div>
+
+            <input type="hidden" id="editMode" value="false">
+
+            <button type="button" class="btn-primary" onclick="toggleEdit()">Edit</button>
+            <button type="submit" class="btn-primary btn-save">Save</button>
+        </form>
     </div>
 
 </body>
+
+
 </html>

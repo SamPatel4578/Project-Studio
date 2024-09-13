@@ -119,9 +119,10 @@ namespace UTR_WebApplication.Controllers
                     if (loginDetail.PasswordHash == model.PasswordHash)
                     {
                         var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, loginDetail.Email) 
-                };
+                            {
+                                new Claim(ClaimTypes.Name, loginDetail.Email),
+                                new Claim(ClaimTypes.NameIdentifier, loginDetail.UserId.ToString()) 
+                            };
 
                         var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -321,85 +322,79 @@ namespace UTR_WebApplication.Controllers
         }
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // Action to display the user profile
         [Authorize]
-        public IActionResult Profile(int id)
+        public IActionResult Profile()
         {
-            var user = _context.Users
-                               .Where(u => u.UserId == id)
-                               .Select(u => new User
-                               {
-                                   UserId = u.UserId,
-                                   FirstName = u.FirstName,
-                                   LastName = u.LastName,
-                                   Email = u.Email,
-                                   PhoneNumber = u.PhoneNumber,
-                                   Address = u.Address
-                               })
-                               .FirstOrDefault();
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Home"); 
+            }
 
+            
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            
+            var user = _context.Users.FirstOrDefault(u => u.UserId == int.Parse(userId));
             if (user == null)
             {
                 return NotFound();
             }
 
-            return View(user);
-        }
-
-        // Action to edit the user profile (GET)
-        [Authorize]
-        [HttpGet]
-        public IActionResult EditProfile(int id)
-        {
-            var user = _context.Users
-                               .Where(u => u.UserId == id)
-                               .Select(u => new User
-                               {
-                                   UserId = u.UserId,
-                                   FirstName = u.FirstName,
-                                   LastName = u.LastName,
-                                   Email = u.Email,
-                                   PhoneNumber = u.PhoneNumber,
-                                   Address = u.Address
-                               })
-                               .FirstOrDefault();
-
-            if (user == null)
+            var loginDetail = _context.LoginDetails.FirstOrDefault(ld => ld.UserId == user.UserId);
+            if (loginDetail == null)
             {
                 return NotFound();
             }
 
-            return View(user);
-        }
-
-        // Action to edit the user profile (POST)
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult EditProfile(User model)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = _context.Users.FirstOrDefault(u => u.UserId == model.UserId);
-                if (user == null)
-                {
-                    return NotFound();
-                }
-
-                user.FirstName = model.FirstName;
-                user.LastName = model.LastName;
-                user.Email = model.Email;
-                user.PhoneNumber = model.PhoneNumber;
-                user.Address = model.Address;
-
-                _context.SaveChanges();
-
-                return RedirectToAction("Profile", new { id = model.UserId });
-            }
+            var model = Tuple.Create(user, loginDetail);
 
             return View(model);
         }
 
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+        [HttpPost]
+        public IActionResult UpdateProfile(User userModel, string NewPassword)
+        {
+            var user = _context.Users.Find(userModel.UserId);
+            if (user != null)
+            {
+                user.FirstName = userModel.FirstName;
+                user.LastName = userModel.LastName;
+                user.Email = userModel.Email;
+                user.PhoneNumber = userModel.PhoneNumber;
+                user.Address = userModel.Address;
+
+                if (!string.IsNullOrEmpty(NewPassword))
+                {
+                    var loginDetails = _context.LoginDetails.FirstOrDefault(ld => ld.UserId == user.UserId);
+                    if (loginDetails != null)
+                    {
+                        loginDetails.PasswordHash = NewPassword; 
+                    }
+                }
+
+                var loginDetail = _context.LoginDetails.FirstOrDefault(ld => ld.UserId == user.UserId);
+                if (loginDetail != null)
+                {
+                    loginDetail.Email = userModel.Email; 
+                }
+
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Profile", "Home"); 
+        }
+
+
+
+        //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -118,6 +118,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PaymentDetailDeleted">PaymentDetailDeleted</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PaymentDetails">PaymentDetails</a>
+                        </li>
+
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
@@ -129,6 +136,8 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Fuel">Fuel</a>
                             </li>
+                            
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-dark" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="~/user-regular.svg" alt="User" class="user-profile-img" style="margin-left: 5px;">  User Profile

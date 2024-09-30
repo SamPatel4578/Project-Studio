@@ -49,6 +49,16 @@ namespace UTR_WebApplication.Controllers
             return View();  
         }
 
+        public IActionResult PaymentDetails()
+        {
+            return View();
+        }
+
+        public IActionResult PaymentDetailDeleted()
+        {
+            return View();
+        }
+
 
         [Authorize]
         public IActionResult Cart()
@@ -61,10 +71,10 @@ namespace UTR_WebApplication.Controllers
         {
             var suppliers = new List<FuelSupplier>
             {
-                new FuelSupplier { FuelSupplierId = 1, SupplierName = "BP", ImageUrl = "https://w7.pngwing.com/pngs/83/43/png-transparent-bp-logo-company-petroleum-technical-miscellaneous-company-leaf-thumbnail.png" },
-                new FuelSupplier { FuelSupplierId = 2, SupplierName = "Shell", ImageUrl = "https://e7.pngegg.com/pngimages/616/199/png-clipart-royal-dutch-shell-shell-oil-company-petroleum-natural-gas-shell-orange-logo.png" },
-                new FuelSupplier { FuelSupplierId = 3, SupplierName = "Caltex", ImageUrl = "https://w7.pngwing.com/pngs/608/336/png-transparent-caltex-hd-logo-thumbnail.png" },
-                new FuelSupplier { FuelSupplierId = 4, SupplierName = "7-Eleven", ImageUrl = "https://w7.pngwing.com/pngs/466/674/png-transparent-logo-7-eleven-convenience-shop-franchising-7-miscellaneous-company-text-thumbnail.png" },
+                new FuelSupplier { FuelSupplierId = 1, SupplierName = "BP", ImageUrl = "https://download.logo.wine/logo/BP/BP-Logo.wine.png" },
+                new FuelSupplier { FuelSupplierId = 2, SupplierName = "Shell", ImageUrl = "https://logos-world.net/wp-content/uploads/2020/11/Shell-Logo.png" },
+                new FuelSupplier { FuelSupplierId = 3, SupplierName = "Caltex", ImageUrl = "https://download.logo.wine/logo/Caltex/Caltex-Logo.wine.png" },
+                new FuelSupplier { FuelSupplierId = 4, SupplierName = "7-Eleven", ImageUrl = "https://logos-world.net/wp-content/uploads/2021/08/7-Eleven-Logo.png" },
                 new FuelSupplier { FuelSupplierId = 5, SupplierName = "Mobil", ImageUrl = "https://logolook.net/wp-content/uploads/2023/12/Mobil-Logo.png" },
                 new FuelSupplier { FuelSupplierId = 6, SupplierName = "United", ImageUrl = "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1492063146/lx58tlei4cswwlpqkkj3.png" },
                 new FuelSupplier { FuelSupplierId = 7, SupplierName = "Ampol", ImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Ampol_Logo_May_2020.svg/2029px-Ampol_Logo_May_2020.svg.png" }

@@ -1,0 +1,105 @@
+﻿
+@model UTR_WebApplication.Models.PaymentDetail
+
+@{
+    ViewBag.HideFooter = true;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .payment-container {
+            width: 100%;
+            max-width: 450px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 90px;
+            margin-left: 400px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .payment-detail {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+            .payment-detail label {
+                font-weight: bold;
+                margin-bottom: 5px;
+                display: block;
+                color: #555;
+            }
+
+            .payment-detail span {
+                display: block;
+                padding: 10px;
+                background-color: #f1f1f1;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                color: #333;
+            }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <h2>Payment Details</h2>
+
+        <div class="payment-detail">
+            <label>Cardholder Name:</label>
+            <span></span>
+        </div>
+
+        <div class="payment-detail">
+            <label>Card Number (Last 4 Digits):</label>
+            <span></span>
+        </div>
+
+        <form asp-action="DeletePaymentDetail" method="post">
+            <input type="hidden" name="paymentId" value="@Model.PaymentId" />
+            <button type="submit" class="btn-primary">Delete Payment Details</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

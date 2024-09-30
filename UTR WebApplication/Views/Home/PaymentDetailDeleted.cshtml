@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.HideFooter = true;
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Payment Details Deleted";
+}
+
+<!DOCTYPE html>
+<html lang="en-au">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details Deleted - UTR</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/UTR_WebApplication.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container mt-5">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h2 class="card-title">Payment Details Deleted</h2>
+                    <p class="card-text">Your payment details have been successfully deleted.</p>
+                    <a href="@Url.Action("PaymentDetails", "Home")" class="btn btn-primary">Go to Payment Detail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

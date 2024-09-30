@@ -1,5 +1,4 @@
-﻿
-@model UTR_WebApplication.Models.PaymentDetail
+﻿@model UTR_WebApplication.Models.PaymentDetail
 
 @{
     ViewBag.HideFooter = true;
@@ -86,18 +85,25 @@
 
         <div class="payment-detail">
             <label>Cardholder Name:</label>
-            <span></span>
+            <span>@(Model?.CardholderName ?? "N/A")</span>
         </div>
 
         <div class="payment-detail">
             <label>Card Number (Last 4 Digits):</label>
-            <span></span>
+            <span>@(Model?.CardLastDigits ?? "N/A")</span>
         </div>
 
-        <form asp-action="DeletePaymentDetail" method="post">
-            <input type="hidden" name="paymentId" value="@Model.PaymentId" />
-            <button type="submit" class="btn-primary">Delete Payment Details</button>
-        </form>
+        @if (Model != null && Model.PaymentId != 0)
+        {
+            <form asp-action="DeletePaymentDetail" method="post">
+                <input type="hidden" name="paymentId" value="@Model.PaymentId" />
+                <button type="submit" class="btn-primary">Delete Payment Details</button>
+            </form>
+        }
+        else
+        {
+            <p>Payment details are not available or invalid.</p>
+        }
 
     </div>
 

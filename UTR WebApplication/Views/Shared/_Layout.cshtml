@@ -118,13 +118,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PaymentDetailDeleted">PaymentDetailDeleted</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PaymentDetails">PaymentDetails</a>
-                        </li>
-
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
@@ -144,7 +137,7 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                                     <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Profile">Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Payment Details</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="PaymentDetails">Payment Details</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li>
                                         <form asp-action="Logout" method="post" class="d-inline">

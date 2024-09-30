@@ -49,11 +49,48 @@ namespace UTR_WebApplication.Controllers
             return View();  
         }
 
+        [Authorize]
         public IActionResult PaymentDetails()
         {
-            return View();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            var paymentDetail = _context.PaymentDetails.FirstOrDefault(pd => pd.UserId == int.Parse(userId)) ?? new PaymentDetail();
+
+            return View(paymentDetail);
+
         }
 
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePaymentDetail(int paymentId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            var paymentDetail = _context.PaymentDetails.FirstOrDefault(pd => pd.PaymentId == paymentId && pd.UserId == int.Parse(userId));
+
+            if (paymentDetail == null)
+            {
+                return NotFound("No payment details found for this user.");
+            }
+
+            _context.PaymentDetails.Remove(paymentDetail);
+            _context.SaveChanges();
+
+            return RedirectToAction("PaymentDetailDeleted");
+        }
+
+        [Authorize]
         public IActionResult PaymentDetailDeleted()
         {
             return View();
@@ -88,6 +125,15 @@ namespace UTR_WebApplication.Controllers
         [Authorize]
         public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized();
+            }
+
+            paymentData.UserId = int.Parse(userId);
+
             if (string.IsNullOrEmpty(paymentData.CardholderName) || string.IsNullOrEmpty(paymentData.CardLastDigits))
             {
                 return Content("Invalid cardholder name or card number.");

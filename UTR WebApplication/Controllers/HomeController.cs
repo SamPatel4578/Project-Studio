@@ -9,6 +9,10 @@ using System.Diagnostics;
 using System.Security.Claims;
 using UTR_WebApplication.Data;
 using UTR_WebApplication.Models;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+
 
 namespace UTR_WebApplication.Controllers
 {
@@ -154,6 +158,75 @@ namespace UTR_WebApplication.Controllers
         public IActionResult PaymentSuccess()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult ViewInvoice()
+        {
+            int orderId = 3; // Hardcoded orderId for this case
+
+            var foodOrder = _context.FoodOrders
+                .Where(o => o.FoodOrderId == orderId)
+                .FirstOrDefault();
+
+            if (foodOrder != null)
+            {
+                var orderItems = _context.OrderItems
+                    .Where(oi => oi.FoodOrderId == orderId)
+                    .ToList();
+
+                foodOrder.OrderItems = orderItems;
+
+                return View(foodOrder);
+            }
+
+            return NotFound(); // 404 if the order is not found
+        }
+
+        public IActionResult DownloadInvoice(int orderId)
+        {
+            var foodOrder = _context.FoodOrders
+                .Where(o => o.FoodOrderId == orderId)
+                .FirstOrDefault();
+
+            if (foodOrder == null)
+            {
+                return NotFound(); // If order not found, return 404
+            }
+
+            // Fetch the associated order items
+            var orderItems = _context.OrderItems
+                .Where(oi => oi.FoodOrderId == orderId)
+                .ToList();
+
+            foodOrder.OrderItems = orderItems;
+
+            // Create a PDF document
+            MemoryStream workStream = new MemoryStream();
+            Document doc = new Document();
+            PdfWriter.GetInstance(doc, workStream).CloseStream = false;
+
+            doc.Open();
+
+            // Add content to the PDF
+            doc.Add(new Paragraph("Order Invoice"));
+            doc.Add(new Paragraph("Order ID: " + foodOrder.FoodOrderId));
+            doc.Add(new Paragraph("Total Price: $" + foodOrder.TotalPrice));
+            doc.Add(new Paragraph("Items:"));
+
+            foreach (var item in foodOrder.OrderItems)
+            {
+                doc.Add(new Paragraph($"{item.ItemName} - Quantity: {item.Quantity} - Price: ${item.Price}"));
+            }
+
+            doc.Close();
+
+            // Return the PDF as a download
+            byte[] byteInfo = workStream.ToArray();
+            workStream.Write(byteInfo, 0, byteInfo.Length);
+            workStream.Position = 0;
+
+            return File(workStream, "application/pdf", $"Invoice_{foodOrder.FoodOrderId}.pdf");
         }
 
         private int GetUserId()

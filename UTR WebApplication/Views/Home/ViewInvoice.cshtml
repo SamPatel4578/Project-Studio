@@ -1,0 +1,56 @@
+﻿@model UTR_WebApplication.Models.FoodOrder
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Invoice</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .invoice-container {
+            margin: 35px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.7);
+        }
+
+        .invoice-header {
+            margin-bottom: 20px;
+        }
+
+        .invoice-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .invoice-total {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="invoice-container">
+            <h2 class="invoice-header">Order Invoice</h2>
+            <div class="invoice-details">
+                <p><strong>Order ID:</strong> @Model.FoodOrderId</p>
+                <p><strong>Items:</strong></p>
+                <ul>
+                    @foreach (var item in Model.OrderItems)
+                    {
+                        <li>@item.ItemName - Quantity: @item.Quantity - Price: $@item.Price</li>
+                    }
+                </ul>
+                <p><strong>Total Quantity:</strong> @Model.OrderItems.Sum(i => i.Quantity)</p>
+                <p class="invoice-total">Total Price: $@Model.TotalPrice</p>
+            </div>
+            <a href="/Home/Index" class="btn btn-primary">Go Back to Home</a>
+            <a href="/Home/DownloadInvoice?orderId=@Model.FoodOrderId" class="btn btn-secondary">Download Invoice</a>
+        </div>
+    </div>
+</body>
+</html>

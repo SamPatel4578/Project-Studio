@@ -1,38 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\",
+  "WorkspaceRootPath": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\smits\\source\\repos\\project-studio\\utr webapplication\\views\\home\\viewinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\viewinvoice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\fuel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\fuel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\paymentdetaildeleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\paymentdetaildeleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\smits\\source\\repos\\project-studio\\utr webapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\paymentdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\paymentdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\smits\\source\\repos\\project-studio\\utr webapplication\\views\\home\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\paymentsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/SMIT_SQLEXPRESS/UTR/True/SqlTable/dbo.Food_Orders.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/SMIT_SQLEXPRESS/UTR/True/SqlTable/dbo.Order_Items.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\smits\\source\\repos\\project-studio\\utr webapplication\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +32,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,102 +40,74 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Payment.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Payment.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
-              "RelativeToolTip": "Views\\Home\\Payment.cshtml",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAkwHoAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "dbo.Order_Items [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/SMIT_SQLEXPRESS/UTR/True/SqlTable/dbo.Order_Items.sql",
+              "ToolTip": "dbo.Order_Items [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-01T04:31:19.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Food_Orders [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/SMIT_SQLEXPRESS/UTR/True/SqlTable/dbo.Food_Orders.sql",
+              "ToolTip": "dbo.Food_Orders [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-01T04:31:11.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Profile.cshtml",
+              "RelativeToolTip": "Views\\Home\\Profile.cshtml",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAQwJsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-01T02:42:56.49Z",
+              "WhenOpened": "2024-10-01T04:02:10.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ViewInvoice.cshtml",
+              "DocumentMoniker": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\ViewInvoice.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ViewInvoice.cshtml",
+              "ToolTip": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\ViewInvoice.cshtml",
+              "RelativeToolTip": "Views\\Home\\ViewInvoice.cshtml",
+              "ViewState": "AQIAABkAAAAAAAAAAAAIwCkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T03:43:33.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Cart.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Cart.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Cart.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Cart.cshtml",
-              "RelativeToolTip": "Views\\Home\\Cart.cshtml",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAkwNoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-01T02:41:31.859Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAqwOUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T06:15:26.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Fuel.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Fuel.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Fuel.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Fuel.cshtml",
-              "RelativeToolTip": "Views\\Home\\Fuel.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAADoAAABqAAAAAAAAAA==",
+              "Title": "PaymentSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentSuccess.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\PaymentSuccess.cshtml",
+              "ToolTip": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentSuccess.cshtml",
+              "RelativeToolTip": "Views\\Home\\PaymentSuccess.cshtml",
+              "ViewState": "AQIAACUAAAAAAAAAAAAIwDoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-01T02:40:54.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAiwE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T06:15:26.36Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PaymentDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentDetails.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\PaymentDetails.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentDetails.cshtml",
-              "RelativeToolTip": "Views\\Home\\PaymentDetails.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T06:04:56.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PaymentDetailDeleted.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentDetailDeleted.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\PaymentDetailDeleted.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentDetailDeleted.cshtml",
-              "RelativeToolTip": "Views\\Home\\PaymentDetailDeleted.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T05:08:06.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAAAEoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T04:59:44.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-30T04:49:56.689Z",
+              "WhenOpened": "2024-10-01T03:44:12.839Z",
               "EditorCaption": ""
             }
           ]

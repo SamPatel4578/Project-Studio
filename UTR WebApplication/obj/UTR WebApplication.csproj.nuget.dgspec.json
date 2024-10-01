@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj": {}
+    "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj": {
+    "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+        "projectUniqueName": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
         "projectName": "UTR WebApplication",
-        "projectPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
-        "packagesPath": "C:\\Users\\ombha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\obj\\",
+        "projectPath": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+        "packagesPath": "C:\\Users\\smits\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ombha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\smits\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,6 +73,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.4, )"
             }
           },
           "imports": [
@@ -98,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

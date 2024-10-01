@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mvdfosIqzD7HXtxyS3nroGVa/W13+BCqC8YNjI/wKASKjr4gmWzYE2ZuIGcPZ+Nsp+PI3KLABTcOfIKpjSPbbQ==",
+  "dgSpecHash": "f7G7MJnGoMG0gI1USv6QREaI5DY3HIaZqhOIlKurO0Qc9EFPIPxODVjJ+QWHDOYbdRMUvd2uahzBycmi6I8J2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kxu39\\Source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+  "projectFilePath": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kxu39\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\kxu39\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

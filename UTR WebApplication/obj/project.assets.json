@@ -8252,11 +8252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kxu39\\Source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
       "projectName": "UTR WebApplication",
-      "projectPath": "C:\\Users\\kxu39\\Source\\Repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "projectPath": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
       "packagesPath": "C:\\Users\\kxu39\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kxu39\\Source\\Repos\\Project-Studio\\UTR WebApplication\\obj\\",
+      "outputPath": "C:\\Users\\kxu39\\source\\repos\\Project-Studio\\UTR WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

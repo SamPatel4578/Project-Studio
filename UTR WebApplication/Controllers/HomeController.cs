@@ -226,6 +226,32 @@ namespace UTR_WebApplication.Controllers
             return RedirectToAction("PaymentSuccess");
         }
 
+        [HttpPost]
+        [Authorize]
+        public IActionResult ProcessPaymentCheck(string cardHolderName, string cardNumber, string cvv, string savePaymentDetails)
+        {
+            if (string.IsNullOrEmpty(cardNumber) || cardNumber.Length != 16 || !cardNumber.All(char.IsDigit))
+            {
+                ModelState.AddModelError("", "Card number must be exactly 16 digits and contain only numbers.");
+            }
+
+        
+            if (string.IsNullOrEmpty(cvv) || cvv.Length != 3 || !cvv.All(char.IsDigit))
+            {
+                ModelState.AddModelError("", "CVV must be exactly 3 digits and contain only numbers.");
+            }
+
+      
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+           
+            return RedirectToAction("PaymentSuccess");
+        }
+
+
 
         [Authorize]
         public IActionResult PaymentSuccess()

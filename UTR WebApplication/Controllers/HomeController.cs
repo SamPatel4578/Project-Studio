@@ -29,6 +29,22 @@ namespace UTR_WebApplication.Controllers
 
         public IActionResult Index()
         {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                var currentUserEmail = User.Identity.Name;
+
+                var currentUser = _context.Users.FirstOrDefault(u => u.Email == currentUserEmail);
+
+                if (currentUser != null)
+                {
+                    ViewBag.UserId = currentUser.UserId;  
+                }
+            }
+            else
+            {
+                ViewBag.UserId = null; 
+            }
+
             return View();
         }
 
@@ -166,6 +182,7 @@ namespace UTR_WebApplication.Controllers
         [Authorize]
         public IActionResult ProcessPayment(PaymentDetail paymentData, string SavePaymentDetails)
         {
+           
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             if (string.IsNullOrEmpty(userId))
@@ -188,8 +205,27 @@ namespace UTR_WebApplication.Controllers
                 _context.SaveChanges();
             }
 
+            var currentUser = _context.Users.FirstOrDefault(u => u.UserId == paymentData.UserId);
+
+            if (currentUser != null)
+            {
+                currentUser.Points = (currentUser.Points ?? 0) + paymentData.Amount;
+
+                if (currentUser.Points >= 100)
+                {
+                    currentUser.Status = "Crown";
+                }
+                else
+                {
+                    currentUser.Status = "Not Crown";
+                }
+
+                _context.SaveChanges();
+            }
+
             return RedirectToAction("PaymentSuccess");
         }
+
 
         [Authorize]
         public IActionResult PaymentSuccess()
@@ -200,7 +236,7 @@ namespace UTR_WebApplication.Controllers
         [HttpGet]
         public IActionResult ViewInvoice()
         {
-            int orderId = 3; // Hardcoded orderId for this case
+            int orderId = 3;
 
             var foodOrder = _context.FoodOrders
                 .Where(o => o.FoodOrderId == orderId)
@@ -270,6 +306,25 @@ namespace UTR_WebApplication.Controllers
         {
             return 1; 
         }
+
+        public IActionResult ViewPointsStatus(int customerId)
+        {
+            // Fetch the current user from the database based on the customerId
+            var currentUser = _context.Users.FirstOrDefault(u => u.UserId == customerId);
+
+            if (currentUser == null)
+            {
+                return NotFound(); // Handle the case where the user isn't found
+            }
+
+            // Pass the Points and Status to the view using an anonymous object
+            return View(new
+            {
+                Points = currentUser.Points,
+                Status = currentUser.Status
+            });
+        }
+
 
 
         [HttpPost]

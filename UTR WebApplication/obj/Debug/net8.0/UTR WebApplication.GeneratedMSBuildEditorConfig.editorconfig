@@ -17,139 +17,143 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UTR_WebApplication
 build_property.RootNamespace = UTR_WebApplication
-build_property.ProjectDir = C:\Users\dtpat\Source\Repos\Project-Studio\UTR WebApplication\
+build_property.ProjectDir = C:\Users\smits\source\repos\Project-Studio\UTR WebApplication\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dtpat\Source\Repos\Project-Studio\UTR WebApplication
+build_property.MSBuildProjectDirectory = C:\Users\smits\source\repos\Project-Studio\UTR WebApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/Cart.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/CashierDashboard.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/CashierDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXNoaWVyRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/FoodMenu.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/FoodMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb29kTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/Fuel.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/Fuel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGdWVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/Index.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/Login.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/OrderHistory.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/OrderHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlckhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/Payment.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/Payment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXltZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/PaymentDetailDeleted.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/PaymentDetailDeleted.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXltZW50RGV0YWlsRGVsZXRlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/PaymentDetails.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/PaymentDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXltZW50RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/PaymentSuccess.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/PaymentSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXltZW50U3VjY2Vzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/Privacy.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/Profile.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/SignUp.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/StaffLogin.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/StaffLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdGFmZkxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/TwofectorAuth.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/TwofectorAuth.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUd29mZWN0b3JBdXRoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Home/ViewInvoice.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/ViewInvoice.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3SW52b2ljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/MenuItems/Create.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Home/ViewPointsStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3UG9pbnRzU3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/MenuItems/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/MenuItems/Delete.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/MenuItems/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/MenuItems/Details.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/MenuItems/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/MenuItems/Edit.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/MenuItems/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/MenuItems/Index.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/MenuItems/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudUl0ZW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Shared/Error.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Users/Create.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Users/Delete.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Users/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Users/Details.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Users/Edit.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Users/Index.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/_ViewImports.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/_ViewStart.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dtpat/Source/Repos/Project-Studio/UTR WebApplication/Views/Shared/_Layout.cshtml]
+[C:/Users/smits/source/repos/Project-Studio/UTR WebApplication/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-27411ae2by

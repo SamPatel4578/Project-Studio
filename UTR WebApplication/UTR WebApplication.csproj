@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Home\Index1.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\logo.ico" />
   </ItemGroup>
 

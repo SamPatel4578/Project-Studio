@@ -19,6 +19,8 @@ public partial class User
 
     public int? RoleId { get; set; }
 
+    public decimal? Points { get; set; }
+    public string? Status { get; set; }
     public virtual ICollection<FoodOrder> FoodOrders { get; set; } = new List<FoodOrder>();
 
     public virtual ICollection<FuelOrder> FuelOrders { get; set; } = new List<FuelOrder>();

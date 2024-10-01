@@ -169,7 +169,10 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="~/user-solid.svg" alt="User" class="user-profile-img" style="margin-left: 5px;"> User Profile
-                                    <img src="~/crown-solid.svg" alt="User" class="crown-img" style="margin-left: 5px;">
+                                    @if (ViewBag.UserPoints > 100)
+                                    {
+                                        <img src="~/crown-solid.svg" alt="User" class="crown-img" style="margin-left: 5px;">
+                                    }
 
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">

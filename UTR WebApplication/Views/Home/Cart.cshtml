@@ -122,6 +122,11 @@
     <script>
         let deliveryCharge = 10.00;
         let isDelivery = false;
+        let isCrownCustomer = @ViewBag.UserPoints >= 100 ? true : false;
+
+        if (isCrownCustomer) {
+            deliveryCharge = 0;
+        }
 
         function loadCart() {
             let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
@@ -192,6 +197,7 @@
         function selectPickup() {
             isDelivery = false;
             document.getElementById('addressContainer').style.display = 'none';
+            document.getElementById('deliveryChargeContainer').style.display = 'none';
             loadCart();
             alert('You have selected Pick-Up. Please pick your food in 20 minutes.');
         }
@@ -199,6 +205,7 @@
         function selectDelivery() {
             isDelivery = true;
             document.getElementById('addressContainer').style.display = 'block';
+            document.getElementById('deliveryChargeContainer').style.display = 'block';
             loadCart();
         }
 
@@ -214,7 +221,9 @@
         <h1>Your Cart</h1>
         <div id="cartItems"></div>
         <a class="cart-total btn btn-primary" style="float: right; color: white; margin-top:20px;" href="/Home/FoodMenu">Back to Menu</a>
-        <div class="" style="text-align:left; padding-top:20px;" id="">Delivery Charge: $10.00</div>
+        <div id="deliveryChargeContainer" class="cart-total" style="display: none;">
+            Delivery Charge: $<span id="deliveryCharge">10.00</span>
+        </div>
         <div class="cart-total" style="padding-top: 5px; max-width:150px;" id="totalPrice">Total: $0.00</div>
 
         <div class="button-group">
@@ -226,7 +235,7 @@
 
         <form action="/Home/Payment" method="GET" onsubmit="clearFuelTotal()">
             <input type="hidden" name="paymentType" value="cart">
-            <div class="address-input" id="addressContainer">
+            <div class="address-input" id="addressContainer" style="display: none;">
                 <label for="address">Enter your address for delivery:</label>
                 <input type="text" id="address" name="address" placeholder="Your address...">
             </div>

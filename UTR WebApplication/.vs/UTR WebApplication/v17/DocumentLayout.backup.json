@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\tejas\\source\\repos\\project-studio\\utr webapplication\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\tejas\\source\\repos\\project-studio\\utr webapplication\\views\\home\\orderhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\orderhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -27,27 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwDMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T05:50:54.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "OrderHistory.cshtml",
               "DocumentMoniker": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\OrderHistory.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\OrderHistory.cshtml",
               "ToolTip": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\OrderHistory.cshtml",
               "RelativeToolTip": "Views\\Home\\OrderHistory.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAswEQAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-01T05:49:58.557Z",
+              "WhenOpened": "2024-10-01T06:04:38.891Z",
               "EditorCaption": ""
             }
           ]

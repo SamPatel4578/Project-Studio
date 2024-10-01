@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\tejas\\source\\repos\\project-studio\\utr webapplication\\views\\home\\orderhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\orderhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderHistory.cshtml",
+              "DocumentMoniker": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\OrderHistory.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\OrderHistory.cshtml",
+              "ToolTip": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\OrderHistory.cshtml",
+              "RelativeToolTip": "Views\\Home\\OrderHistory.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T06:04:38.891Z",
+              "EditorCaption": ""
             }
           ]
         }

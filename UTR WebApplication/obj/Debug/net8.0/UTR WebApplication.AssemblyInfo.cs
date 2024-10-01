@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UTR WebApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d569decc197043e9832fbf52d535ce00183835f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ce8c7088e20f85507b7cf4b2cd3af9732d8e8a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("UTR WebApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UTR WebApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\payment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\home\\fuel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\home\\fuel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|c:\\users\\ombha\\source\\repos\\project-studio\\utr webapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{93777398-2163-4D5A-AB3E-0DC052DF684B}|UTR WebApplication.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +50,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Payment.cshtml",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Payment.cshtml",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Payment.cshtml",
+              "RelativeToolTip": "Views\\Home\\Payment.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAmwJ8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T02:42:56.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Cart.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Cart.cshtml",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Cart.cshtml",
+              "RelativeToolTip": "Views\\Home\\Cart.cshtml",
+              "ViewState": "AgIAALYAAAAAAAAAAAAmwMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T02:41:31.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Fuel.cshtml",
+              "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Fuel.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Fuel.cshtml",
+              "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\Fuel.cshtml",
+              "RelativeToolTip": "Views\\Home\\Fuel.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwEsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-01T02:40:54.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -46,12 +97,11 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAI0AAAAAAAAAAAAiwE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T06:15:26.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T06:15:26.36Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "PaymentDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentDetails.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\PaymentDetails.cshtml",
@@ -59,12 +109,11 @@
               "RelativeToolTip": "Views\\Home\\PaymentDetails.cshtml",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAGUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T06:04:56.632Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T06:04:56.632Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "PaymentDetailDeleted.cshtml",
               "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Home\\PaymentDetailDeleted.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\PaymentDetailDeleted.cshtml",
@@ -72,25 +121,24 @@
               "RelativeToolTip": "Views\\Home\\PaymentDetailDeleted.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-30T05:08:06.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T05:08:06.58Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAAEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-30T04:59:44.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ombha\\source\\Repos\\Project-Studio\\UTR WebApplication\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -98,8 +146,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-30T04:49:56.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T04:49:56.689Z"
             }
           ]
         }

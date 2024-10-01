@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Payment";
 
     ViewBag.HideFooter = true;
 }
@@ -133,7 +133,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            let totalAmount = sessionStorage.getItem('totalAmount') || '0.00';
+            const params = new URLSearchParams(window.location.search);
+            let paymentType = params.get('paymentType');
+            let totalAmount = '0.00';
+
+            if (paymentType === 'fuel') {
+                totalAmount = sessionStorage.getItem('fuelTotalAmount') || '0.00';
+            } else if (paymentType === 'cart') {
+                totalAmount = sessionStorage.getItem('cartTotalAmount') || '0.00';
+            }
+
+            totalAmount = parseFloat(totalAmount).toFixed(2);
             document.getElementById('totalAmountDisplay').innerText = `Total Payment: $${totalAmount}`;
             document.getElementById('Amount').value = totalAmount;
         });

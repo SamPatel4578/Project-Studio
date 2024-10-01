@@ -140,7 +140,7 @@
 
             document.getElementById('totalPrice').innerText = `Total: $${total.toFixed(2)}`;
 
-            sessionStorage.setItem('totalAmount', total.toFixed(2));
+            sessionStorage.setItem('cartTotalAmount', total.toFixed(2));
         }
 
         function increaseQuantity(index) {
@@ -184,6 +184,9 @@
         }
 
         window.onload = loadCart;
+
+        function clearFuelTotal() {
+            sessionStorage.removeItem('fuelTotalAmount');
     </script>
 </head>
 <body>
@@ -200,8 +203,8 @@
 
         <br />
 
-
-        <form action="/Home/Payment" method="GET">
+        <form action="/Home/Payment" method="GET" onsubmit="clearFuelTotal()">
+            <input type="hidden" name="paymentType" value="cart">
             <div class="address-input" id="addressContainer">
                 <label for="address">Enter your address for delivery:</label>
                 <input type="text" id="address" name="address" placeholder="Your address...">

@@ -1,6 +1,4 @@
-﻿
-
-@model IEnumerable<UTR_WebApplication.Models.MenuItem>
+﻿@model IEnumerable<UTR_WebApplication.Models.MenuItem>
 
 @{
     ViewBag.HideFooter = true;
@@ -16,7 +14,12 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Food Menu</title>
     <style>
-        
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
         .menu-box {
             display: flex;
@@ -35,7 +38,7 @@
         }
 
             .menu-box:hover {
-                background-color: lightblue;
+                background-color: lightgrey;
             }
 
             .menu-box img {
@@ -43,7 +46,7 @@
                 object-fit: cover;
                 border-radius: 5px;
                 margin-bottom: 10px;
-                margin-right: 35px;
+                margin-right: 40px;
             }
 
         .menu-title {
@@ -72,18 +75,16 @@
                 background-color: #0056b3;
             }
     </style>
-    
 
     <script>
         function addToCart(itemName, itemPrice, imageUrl) {
             let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
-            
             let existingItem = cart.find(item => item.name === itemName);
             if (existingItem) {
-                existingItem.qty += 1; 
+                existingItem.qty += 1;
             } else {
-                cart.push({ name: itemName, price: itemPrice, qty: 1, imageUrl: imageUrl }); 
+                cart.push({ name: itemName, price: itemPrice, qty: 1, imageUrl: imageUrl });
             }
 
             sessionStorage.setItem('cart', JSON.stringify(cart));
@@ -91,29 +92,22 @@
         }
     </script>
 
-
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <h1 style="margin-top:140px; color:black; text-align:center;"><strong>FOOD MENU</strong></h1>
-
-            <div class="container mt-3">
-                <div class="row">
-                    @foreach (var item in Model)
-
-                    {
-                        <div class="col-md-3">
-                            <div class="menu-box" onclick="addToCart('@item.ItemName', '@item.Price', '@item.ImageUrl')">
-                                <img src="@item.ImageUrl" alt="@item.ItemName">
-                                <div class="menu-title">@item.ItemName</div>
-                                <div class="menu-description">@item.Description</div>
-                                <div class="menu-price">@String.Format("{0:C}", item.Price)</div>
-                            </div>
-                        </div>
-                    }
+        <h1 style="margin-top:80px; color: white; text-align:center;"><strong>FOOD MENU</strong></h1>
+        <div class="row mt-4">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3">
+                    <div class="menu-box" onclick="addToCart('@item.ItemName', '@item.Price', '@item.ImageUrl')">
+                        <img src="@item.ImageUrl" alt="@item.ItemName">
+                        <div class="menu-title">@item.ItemName</div>
+                        <div class="menu-description">@item.Description</div>
+                        <div class="menu-price">@String.Format("{0:C}", item.Price)</div>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 </body>

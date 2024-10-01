@@ -49,8 +49,23 @@ namespace UTR_WebApplication.Controllers
 
         public IActionResult OrderHistory()
         {
+            var orders = from orderItem in _context.OrderItems
+                         join foodOrder in _context.FoodOrders
+                         on orderItem.FoodOrderId equals foodOrder.FoodOrderId
+                         select new
+                         {
+                             FoodOrderId = orderItem.FoodOrderId,
+                             ItemName = orderItem.ItemName,
+                             Quantity = orderItem.Quantity,
+                             Price = orderItem.Price,
+                             ImageUrl = orderItem.ImageUrl
+                         };
+
+            ViewBag.Orders = orders.ToList();
+
             return View();
         }
+
 
 
 

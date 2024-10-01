@@ -1328,3 +1328,5 @@ C:\Users\smits\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\B
 C:\Users\smits\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\itextsharp.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\Users\tejas\source\repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\itextsharp.dll
+C:\Users\dtpat\Source\Repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\dtpat\Source\Repos\Project-Studio\UTR WebApplication\bin\Debug\net8.0\itextsharp.dll

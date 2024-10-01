@@ -106,6 +106,17 @@
 <body>
     <div class="login-container">
         <h1>LOGIN</h1>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert">
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            </div>
+        }
+
         <form asp-action="Login" asp-controller="Home" method="post">
             <label asp-for="Email">Email</label>
             <input asp-for="Email" placeholder="Enter Email" class="form-control"  required />

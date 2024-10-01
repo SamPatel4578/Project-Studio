@@ -333,48 +333,48 @@ namespace UTR_WebApplication.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 var loginDetail = _context.LoginDetails.FirstOrDefault(u => u.Email == model.Email);
 
-                if (loginDetail != null)
+
+                if (loginDetail == null || loginDetail.PasswordHash != model.PasswordHash)
                 {
-                    if (loginDetail.PasswordHash == model.PasswordHash)
-                    {
-                        var claims = new List<Claim>
-                            {
-                                new Claim(ClaimTypes.Name, loginDetail.Email),
-                                new Claim(ClaimTypes.NameIdentifier, loginDetail.UserId.ToString()) 
-                            };
 
-                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                        var authProperties = new AuthenticationProperties
-                        {
-                            IsPersistent = true, 
-                            ExpiresUtc = DateTime.UtcNow.AddMinutes(30) 
-                        };
-
-                        await HttpContext.SignInAsync(
-                            CookieAuthenticationDefaults.AuthenticationScheme,
-                            new ClaimsPrincipal(claimsIdentity),
-                            authProperties);
-
-                        if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
-                        {
-                            return Redirect(returnUrl);
-                        }
-
-                        return RedirectToAction("FoodMenu", "Home");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "Invalid password.");
-                    }
+                    ModelState.AddModelError("", "Incorrect username or password.");
+                    return View(model);
                 }
-                else
+
+
+                var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, loginDetail.Email),
+                        new Claim(ClaimTypes.NameIdentifier, loginDetail.UserId.ToString())
+                    };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var authProperties = new AuthenticationProperties
                 {
-                    ModelState.AddModelError("", "Invalid email.");
+                    IsPersistent = true,
+                    ExpiresUtc = DateTime.UtcNow.AddMinutes(30)
+                };
+
+
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties);
+
+
+                if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                {
+                    return Redirect(returnUrl);
                 }
+
+
+                return RedirectToAction("FoodMenu", "Home");
             }
+
 
             return View(model);
         }

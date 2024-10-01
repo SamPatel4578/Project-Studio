@@ -37,6 +37,7 @@ namespace UTR_WebApplication.Controllers
 
                 if (currentUser != null)
                 {
+                    ViewBag.UserPoints = currentUser.Points ?? 0;
                     ViewBag.UserId = currentUser.UserId;  
                 }
             }
@@ -157,6 +158,15 @@ namespace UTR_WebApplication.Controllers
         [Authorize]
         public IActionResult Cart()
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var currentUser = _context.Users.FirstOrDefault(u => u.UserId == int.Parse(userId));
+
+            if (currentUser != null)
+            {
+                ViewBag.UserPoints = currentUser.Points ?? 0;
+                ViewBag.UserStatus = currentUser.Status;
+            }
+
             return View();
         }
 

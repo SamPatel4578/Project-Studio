@@ -1,10 +1,8 @@
-﻿Cashier Full Code:
-
-@{
+﻿@{
     ViewBag.HideFooter = true;
 }
 
- @model List<UTR_WebApplication.Models.FoodOrder>
+@model List<UTR_WebApplication.Models.FoodOrder>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,19 +11,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashier Dashboard</title>
     <style>
+
+        body {
+            background: linear-gradient(to bottom, #595959 0%, #999999 100%);
+        }
+
         .container {
-            width: 90%;
-            margin: 20px auto;
-            background-color: lightgray;
+            width: 100%;
+            color: white;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
             border-radius: 8px;
-            padding: 20px;
-            margin-top: 60px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 0px;
+            margin-top: 30px;
             border-radius: 8px;
         }
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #fff; /* Ensure text is white for better contrast */
+            margin-top: 0px;
         }
 
         .search-filter {
@@ -39,18 +45,21 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            color: #333;
         }
 
         .filter-select {
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            color: #333;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            color: #fff; /* Ensure table text remains visible */
         }
 
             table th, table td {
@@ -60,11 +69,11 @@
             }
 
             table th {
-                background-color: #f2f2f2;
+                background-color: #333; /* Darker background for table header */
             }
 
             table tr:hover {
-                background-color: #f1f1f1;
+                background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
             }
 
             table img {
@@ -97,7 +106,7 @@
         }
     </style>
 </head>
-<body>
+<body style="margin-top:150px;">
     <div class="container">
         <h1>Cashier Dashboard</h1>
 

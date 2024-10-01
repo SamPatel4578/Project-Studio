@@ -8246,19 +8246,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\smits\\.nuget\\packages\\": {}
+    "C:\\Users\\tejas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "projectUniqueName": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
       "projectName": "UTR WebApplication",
-      "projectPath": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
-      "packagesPath": "C:\\Users\\smits\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\smits\\source\\repos\\Project-Studio\\UTR WebApplication\\obj\\",
+      "projectPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\UTR WebApplication.csproj",
+      "packagesPath": "C:\\Users\\tejas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tejas\\source\\repos\\Project-Studio\\UTR WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\smits\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tejas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8342,7 +8342,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

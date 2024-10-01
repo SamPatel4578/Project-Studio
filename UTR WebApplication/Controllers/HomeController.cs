@@ -47,6 +47,13 @@ namespace UTR_WebApplication.Controllers
             return View();
         }
 
+        public IActionResult OrderHistory()
+        {
+            return View();
+        }
+
+
+
         [Authorize]
         public IActionResult Payment()
         {
@@ -98,6 +105,21 @@ namespace UTR_WebApplication.Controllers
         public IActionResult PaymentDetailDeleted()
         {
             return View();
+        }
+
+
+
+        [Authorize]
+        public IActionResult CashierDashboard()
+        {
+            // Fetch all food orders including related order items
+            var orders = _context.FoodOrders
+                                 .Include(o => o.OrderItems)
+                                 .Include(o => o.User)
+                                 .Where(o => o.Status == "Pending" || o.Status == "Accepted" || o.Status == "Declined")
+                                 .ToList();
+
+            return View(orders);
         }
 
 

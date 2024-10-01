@@ -1,0 +1,218 @@
+﻿Cashier Full Code:
+
+@{
+    ViewBag.HideFooter = true;
+}
+
+ @model List<UTR_WebApplication.Models.FoodOrder>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashier Dashboard</title>
+    <style>
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: lightgray;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 60px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .filter-select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+            table th, table td {
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            table th {
+                background-color: #f2f2f2;
+            }
+
+            table tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            table img {
+                width: 100px;
+                height: auto;
+                border-radius: 5px;
+            }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-accept {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-decline {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .no-orders {
+            text-align: center;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cashier Dashboard</h1>
+
+        <!-- Search and filter section -->
+        <div class="search-filter">
+            <input type="text" id="orderSearch" class="search-input" placeholder="Search by Order ID or Customer Name">
+            <select id="statusFilter" class="filter-select">
+                <option value="All">All Orders</option>
+                <option value="Pending">Pending</option>
+                <option value="Accepted">Accepted</option>
+                <option value="Declined">Declined</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
+
+        <!-- Orders Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Items</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="ordersTableBody">
+                @if (Model != null && Model.Any())
+
+                {
+                    @foreach (var order in Model)
+                    {
+                        <tr data-status="@order.Status">
+                            <td>@order.FoodOrderId</td>
+                            <td>@order.User?.FirstName @order.User?.LastName</td>
+                            <td>
+                                <ul>
+                                    @foreach (var item in order.OrderItems)
+
+                                    {
+                                        <li>
+                                            @item.ItemName (x @item.Quantity) - $@item.Price
+                                            <br />
+                                            <img src="@item.ImageUrl" alt="Item Image" style="width: 50px;">
+                                        </li>
+                                    }
+                                </ul>
+                            </td>
+                            <td>$@order.TotalPrice</td>
+                            <td>@order.Status</td>
+                            <td>
+                                @if (order.Status == "Pending")
+
+                                {
+                                    <form method="post" action="/Cashier/UpdateOrderStatus">
+                                        <input type="hidden" name="orderId" value="@order.FoodOrderId" />
+                                        <button type="submit" name="action" value="accept" class="btn btn-accept">Accept</button>
+                                        <button type="submit" name="action" value="decline" class="btn btn-decline">Decline</button>
+                                    </form>
+                                }
+
+                                else
+
+                                {
+                                    <span>Action completed</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+
+                else
+
+                {
+                    <tr>
+                        <td colspan="6" class="no-orders">No orders available.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Search and filter functionality
+        document.getElementById('orderSearch').addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();
+            const orders = document.querySelectorAll('#ordersTableBody tr');
+
+            orders.forEach(order => {
+                const orderId = order.cells[0].textContent.toLowerCase();
+                const customerName = order.cells[1].textContent.toLowerCase();
+
+                if (orderId.includes(searchValue) || customerName.includes(searchValue)) {
+                    order.style.display = '';
+                } else {
+                    order.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('statusFilter').addEventListener('change', function () {
+            const filterValue = this.value.toLowerCase();
+            const orders = document.querySelectorAll('#ordersTableBody tr');
+
+            orders.forEach(order => {
+                const status = order.getAttribute('data-status').toLowerCase();
+
+                if (filterValue === 'all' || status === filterValue) {
+                    order.style.display = '';
+                } else {
+                    order.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

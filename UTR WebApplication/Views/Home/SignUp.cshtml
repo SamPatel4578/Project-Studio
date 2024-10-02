@@ -32,6 +32,7 @@
             
             .signup-container input{
                 background-color:transparent;
+                color:white;
             }
 
             .signup-container input::placeholder {
@@ -89,7 +90,7 @@
             <form asp-action="Register" method="post">
                 <div class="form-group">
                     <label asp-for="FirstName">First Name</label>
-                    <input asp-for="FirstName" class="form-control" style="background-color:transparent; " placeholder="Enter First Name" />
+                    <input asp-for="FirstName" class="form-control" placeholder="Enter First Name" />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
 

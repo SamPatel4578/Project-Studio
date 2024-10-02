@@ -1,6 +1,4 @@
-﻿ORDER HISTORY CODE:
-
-@{
+﻿@{
     ViewBag.HideFooter = true;
 }
 
@@ -9,12 +7,37 @@
 <head>
     <title>Your Previous Orders</title>
     <style>
+        body {
+            background: linear-gradient(to bottom, #595959 0%, #999999 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .custom-container {
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            width: 100%;
+            max-width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 10px;
+            margin-top: 120px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
         .table {
             width: 100%;
             margin: 20px 0;
+            border-collapse: collapse;
+            color: white; 
         }
 
-            .table td, .table th {
+            .table th, .table td {
                 padding: 15px;
                 text-align: left;
             }
@@ -24,20 +47,26 @@
             }
 
                 .table tr:hover {
-                    background-color: #f2f2f2;
+                    background-color: rgba(255, 255, 255, 0.2); 
                 }
 
             .table img {
                 border-radius: 5px;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             }
+
+           
+            .table th {
+                background-color: rgba(255, 255, 255, 0.2);
+                font-weight: bold;
+            }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h2>Your Previous Orders</h2>
+    <div class="custom-container">
+        <h2><b>Your Previous Orders</b></h2>
         <div class="table-responsive">
-            <table class="table" style="border-collapse: collapse; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Order ID</th>
@@ -49,7 +78,6 @@
                 </thead>
                 <tbody>
                     @foreach (var order in ViewBag.Orders)
-
                     {
                         <tr>
                             <td>@order.FoodOrderId</td>

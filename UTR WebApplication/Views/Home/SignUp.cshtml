@@ -13,18 +13,36 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
+            background-image: url('https://t3.ftcdn.net/jpg/02/94/52/66/240_F_294526635_8Fc9IbBHWOC83JsiFNRNx5VivafEjiyi.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .signup-container {
-            margin: 50px auto;
+            margin: 2px auto;
             max-width: 400px;
-            background-color: #fff;
+            background-color: transparent;
             padding: 20px;
             border-radius: 8px;
+            border: 2px solid white;
             box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.7);
+            color: white;
         }
+            
+            .signup-container input{
+                background-color:transparent;
+            }
+
+            .signup-container input::placeholder {
+                color: white;
+            }
+
+            .signup-container input:focus {
+                border-color: black;
+                outline: none;
+                box-shadow: 0 0 8px rgba(78, 84, 200, 0.2);
+            }
 
             .signup-container h2 {
                 text-align: center;
@@ -71,7 +89,7 @@
             <form asp-action="Register" method="post">
                 <div class="form-group">
                     <label asp-for="FirstName">First Name</label>
-                    <input asp-for="FirstName" class="form-control" placeholder="Enter First Name" />
+                    <input asp-for="FirstName" class="form-control" style="background-color:transparent; " placeholder="Enter First Name" />
                     <span asp-validation-for="FirstName" class="text-danger"></span>
                 </div>
 
@@ -107,7 +125,7 @@
 
                 <div class="form-group terms">
                     <input type="checkbox" id="terms" name="terms" required />
-                    <label for="terms">I agree to the <a href="/Home/Privacy" target="_blank">Terms and Conditions</a></label>
+                    <label for="terms">I agree to the <a href="/Home/Privacy" target="_blank" style="color:white;">Terms and Conditions</a></label>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Sign Up</button>

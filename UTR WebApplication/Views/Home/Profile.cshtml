@@ -5,7 +5,7 @@
 @model Tuple<UTR_WebApplication.Models.User, UTR_WebApplication.Models.LoginDetail>
 
 <!DOCTYPE html>
-<html lang="en">    
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('https://png.pngtree.com/background/20240310/original/pngtree-3d-rendering-of-a-communication-network-metaphor-picture-image_8018168.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             margin: 0;
             padding: 0;
             display: flex;
@@ -25,7 +28,7 @@
         .profile-container {
             width: 100%;
             max-width: 450px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for better readability */
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -56,7 +59,7 @@
                 display: block;
                 padding: 10px;
                 background-color: #f1f1f1;
-                border: 1px solid #ddd;
+                border: 1px solid black;
                 border-radius: 5px;
                 color: #333;
             }
@@ -103,7 +106,7 @@
 <body>
 
     <div class="profile-container">
-        <h2>User Profile</h2>
+        <h2><b>User Profile</b></h2>
         <form method="post" action="@Url.Action("UpdateProfile", "Home")">
 
             <input type="hidden" name="UserId" value="@Model.Item1.UserId" />
@@ -147,7 +150,7 @@
             <input type="hidden" id="editMode" value="false">
 
             <button type="button" class="btn-primary" onclick="toggleEdit()">Edit</button>
-            <button type="submit" class="btn-primary btn-save">Save</button>
+            <button type="submit" class="btn-primary btn-save" style="display: none;">Save</button>
         </form>
     </div>
 

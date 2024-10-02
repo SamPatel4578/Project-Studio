@@ -14,10 +14,19 @@
     <title>Payment</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            background-image: url('https://img.pikbest.com/wp/202343/dollar-money-abstract-texture-vibrant-dollars-background-in-a-business-setting_9943037.jpg!bw700');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
         .payment-container {
             margin: 35px auto;
             max-width: 600px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to make the form readable */
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.7);
@@ -76,7 +85,7 @@
                 <div class="form-group">
                     <label for="CardNumber">Card Number</label>
                     <input type="text" class="form-control" id="CardNumber" name="CardNumber" placeholder="Enter Card Number" maxlength="16" required />
-                    <span class="text-danger" id="cardNumberError"></span> 
+                    <span class="text-danger" id="cardNumberError"></span>
                 </div>
 
                 <input type="hidden" asp-for="CardLastDigits" id="CardLastDigits" />
@@ -89,7 +98,7 @@
                     <div class="form-group col-md-6">
                         <label for="CVV">CVV</label>
                         <input type="text" class="form-control" id="CVV" name="CVV" placeholder="Enter CVV" maxlength="3" required />
-                        <span class="text-danger" id="cvvError"></span> 
+                        <span class="text-danger" id="cvvError"></span>
                     </div>
                 </div>
 
@@ -152,18 +161,15 @@
                 document.getElementById('paymentForm').addEventListener('submit', function (event) {
                     let isValid = true;
 
-                  
                     let cardNumber = document.getElementById('CardNumber').value;
                     let cvv = document.getElementById('CVV').value;
 
                     let cardNumberError = document.getElementById('cardNumberError');
                     let cvvError = document.getElementById('cvvError');
 
-         
                     cardNumberError.textContent = '';
                     cvvError.textContent = '';
 
-           
                     if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
                         cardNumberError.textContent = 'Card number must be exactly 16 digits.';
                         isValid = false;
@@ -174,11 +180,9 @@
                         isValid = false;
                     }
 
-             
                     if (!isValid) {
                         event.preventDefault();
                     } else {
-    
                         document.getElementById('CardLastDigits').value = cardNumber.slice(-4);
                     }
                 });

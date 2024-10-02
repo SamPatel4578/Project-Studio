@@ -1,9 +1,8 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model UTR_WebApplication.Models.LoginDetail
+
 @{
+    ViewBag.HideFooter = true;
 }
-@model UTR_WebApplication.Models.LoginDetail
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,37 +14,43 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" href="~/logo.ico" type="image/x-icon">
-    <title>Cashier Login</title>
+    <title>Login</title>
     <style>
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; 
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-image: url('https://t3.ftcdn.net/jpg/02/94/52/66/240_F_294526635_8Fc9IbBHWOC83JsiFNRNx5VivafEjiyi.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .login-container {
-            background: rgba(255, 255, 255, 0.9);
+            background-color: transparent; 
             border-radius: 15px;
-            box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
             padding: 50px 40px;
             width: 400px;
             text-align: center;
             position: relative;
-            margin-left: 450px;
+            margin-left: 430px; 
+            margin-top: 200px;
+            border: 2px solid white;
         }
 
             .login-container h1 {
                 margin-bottom: 40px;
                 font-size: 28px;
-                color: #333;
+                color: white; 
             }
 
             .login-container label {
                 font-size: 16px;
-                color: #555;
+                color: transparent;
                 display: block;
                 text-align: left;
                 margin-bottom: 10px;
@@ -53,12 +58,18 @@
 
             .login-container input {
                 width: 100%;
-                padding: 12px;
+                padding: 10px;
                 margin: 10px 0 25px 0;
-                border: 1px solid #ddd;
+                border: 1px solid white;
                 border-radius: 5px;
                 font-size: 16px;
+                background-color: transparent;
+                color: white;
             }
+
+                .login-container input::placeholder {
+                    color: white;
+                }
 
                 .login-container input:focus {
                     border-color: black;
@@ -86,28 +97,40 @@
                 display: block;
                 margin-top: 20px;
                 font-size: 14px;
-                color: #555;
+                color: white; 
                 text-decoration: none;
             }
 
                 .login-container .forgot-password:hover {
                     text-decoration: underline;
                 }
+
     </style>
 </head>
 
 <body>
     <div class="login-container">
-        <h1>Cashier Login</h1>
-        <form asp-action="CashierLogin" asp-controller="Cashier" method="post">
-            <label asp-for="Email">Email</label>
-            <input asp-for="Email" placeholder="Enter Cashier Email" class="form-control" required />
+        <h1>STAFF LOGIN</h1>
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert">
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            </div>
+        }
+
+        <form asp-action="Login" asp-controller="Home" method="post">
+            <label asp-for="Email" style="color:white;">Email</label>
+            <input asp-for="Email" placeholder="Enter Email" class="form-control" required />
             <span asp-validation-for="Email" class="text-danger"></span>
 
-            <label asp-for="PasswordHash">Password</label>
+            <label asp-for="PasswordHash" style="color:white;">Password</label>
             <input asp-for="PasswordHash" type="password" placeholder="Enter Password" class="form-control" required />
             <span asp-validation-for="PasswordHash" class="text-danger"></span>
-   
+
             <button type="submit" class="btn btn-dark">Login</button>
             <a href="#" class="forgot-password">Forgot your password?</a>
         </form>

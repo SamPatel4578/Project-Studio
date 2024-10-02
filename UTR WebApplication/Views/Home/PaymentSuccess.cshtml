@@ -1,7 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewBag.HideFooter = true;
 }
 
 @{
@@ -50,19 +48,17 @@
     <div class="container">
         <div class="success-container">
             <h2>Payment Successful!</h2>
-            <img src="~/tick.png" alt="Success" />
+            <img src="~/Success.png" alt="Success" />
             <p>Your payment has been processed successfully.</p>
 
-            <!-- View Invoice Button -->
-            <!-- View Invoice Button -->
             <a href="/Home/ViewInvoice" class="btn btn-primary">View Invoice</a>
         </div>
     </div>
 
     <script>
-        // Handle the "View Invoice" button click
+        
         document.getElementById('viewInvoiceBtn').addEventListener('click', function () {
-            // Navigate to the invoice page
+           
             window.location.href = '/Home/ViewInvoice';
         });
     </script>
